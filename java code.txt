@@ -1,0 +1,579 @@
+1.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class Buff
+{
+	static int a;
+	public static void main(String ags[]) throws Exception
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter value of a");
+		int a=Integer.parseInt(br.readLine());
+		System.out.println(a);
+	}
+}
+
+
+2.
+
+import java.util.Scanner;
+
+class Demo
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please Enter student roll No.");
+		int rollno = sc.nextInt();
+		sc.nextLine();
+		System.out.println(rollno);
+		
+		System.out.println("Please Enter student marks");
+		Double b= sc.nextDouble();
+		System.out.println(b);
+		System.out.println("Roll No:"+rollno+"Marks"+b);
+	}
+}
+
+
+
+3.
+
+ import java.io.Console;
+
+class Demo
+
+{
+	public static void main(String args[]) throws Exception
+	{
+	
+     Console c= System.console();
+	 System.out.println("enter a string");
+	 String s=c.readLine();
+	 System.out.println(s);
+	 System.out.println("enter a string");
+
+	 System.out.println(c.readPassword());
+	}
+}
+
+
+4.
+
+ final class Demo
+{
+//1.final feild
+   /* final int a;
+     Demo()
+    {
+     a=100; 
+    }
+    public static void main(String args[])
+    {
+       Demo d=new Demo();
+       //d.Demo();
+       //System.out.println(a);
+    }
+    //2.final local variable
+    public static void main(String args[])
+   {
+     final int a;
+     a=10;
+     System.out.println(a);
+   }
+
+   //3.final method(used to cannnot override the method in child class) 
+   
+     final void fun()
+      {
+         System.out.println("demo method");
+      }  
+} 
+class test extends Demo
+{
+   void fun()
+      {
+         System.out.println("test method");
+      } 
+}*/
+
+  // 4. final class
+}
+  class test extends Demo
+{
+   void fun()
+      {
+         System.out.println("test method");
+      } 
+} 
+  
+
+5.
+
+import java.util.Scanner;
+
+import java.util.Arrays;
+class Demo
+{
+   public static void main(String arsg[])throws Exception
+   {
+	   int x;
+	   Scanner c=new Scanner(System.in);
+	   //int arr[]={10,20,30,40};
+	   int arr[]=new int[5];
+	   System.out.println("enter a array element");
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   arr[i]=c.nextInt();
+	   }
+	   
+	   System.out.println(" array element are");
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   System.out.println(arr[i]);
+	   }
+	   
+	  /* for(x:arr)
+	   {
+		   System.out.println(x);
+	   
+   }*/
+   int max;
+   Arrays.sort(arr);
+   System.out.println(" sorted array element are");
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   System.out.println(arr[i]);
+	   }
+   Arrays.toString(arr);
+   System.out.println("array element ins Listed form");
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   System.out.println(arr[i]);
+	   }
+	   max=arr[0];
+      for(int i=0;i<arr.length;i++)
+      {
+         if(max < arr[i])
+         {
+             max=arr[i];
+         }
+      }
+	  System.out.println(max);
+	  
+  }
+}
+
+
+
+6.
+
+import java.util.Scanner;
+class Demo
+{
+  public static void main(String args[])throws Exception
+  {
+	  Scanner c=new Scanner(System.in);
+	  //1.using fixed rows and columns.
+     /*int arr[][]=new int[3][5];
+	 for(int i=0;i<arr.length;i++)
+	 {
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		    arr[i][j]=c.nextInt();
+		}
+	 }
+		for(int i=0;i<arr.length;i++)
+	  {
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		   
+		   System.out.println(arr[i][j]);
+		}
+	  }*/
+	  //2.using jagged array
+	  /*int arr[][]=new int[3][];
+
+	  arr[0]=new int[5];
+	  arr[1]=new int[4];
+	  arr[2]=new int[3];
+	for(int i=0;i<arr.length;i++)
+	{
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		    arr[i][j]=c.nextInt();
+		}
+	 }
+		for(int i=0;i<arr.length;i++)
+	   {
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		   
+		   System.out.print(arr[i][j]+" ");
+		}
+		System.out.println();
+		
+	  }*/
+	  //3. using  jagged 3d array .
+	  int arr[][][]=new int[3][4][];
+
+	  arr[0][1]=new int[5][];
+	  arr[0][2]=new int[4][];
+	  arr[0][3]=new int[3][];
+	  
+	for(int i=0;i<arr.length;i++)
+	{
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		    arr[i][j]=c.nextInt();
+		}
+	 }
+		for(int i=0;i<arr.length;i++)
+	  {
+	    for(int j=0;j<arr[i].length;j++)
+		{
+		   
+		   System.out.print(arr[i][j]+" ");
+		}
+		System.out.println();
+		
+	  }
+	  
+}
+	
+}
+
+
+7.
+
+
+public class Bike
+{
+ private String eng_no;
+  private String colour;
+  private String owner_name;
+  private String  reg_no;
+   public Bike(String eng_no,String colour)
+   {
+     this.eng_no=eng_no;
+	 this.colour=colour;
+   }
+   public void  setowner(String owner_name)
+   {
+	   this.owner_name=owner_name;
+   }
+   public void setregno(String reg_no)
+   {
+	    this.reg_no=reg_no;
+   }
+    public String getengno()
+	{
+      return eng_no;
+	}
+    public String getcolour()
+	{
+      return colour;
+	}
+	public String getregno()
+	{
+		return reg_no;
+	}
+	public String getownername()
+	{
+	    return owner_name;
+	}
+		
+ 
+
+
+}
+ class Sales
+ {
+	 public static void main(String args[])
+	 {
+		 Bike pulsar=new Bike("1234","black");
+		 pulsar.setowner("rohan");
+		 pulsar.setregno("9876");
+		 System.out.println("eng number is " + pulsar.getengno());
+		 System.out.println(" colour is " + pulsar.getcolour());
+		 System.out.println("reg numner is " + pulsar.getregno());
+		 System.out.println("owner name is " + pulsar.getownername());
+	 }
+ }
+
+
+8.
+
+class Parent
+{
+	  private int a;
+	  private int b;
+	  private String s;
+	  Parent()
+	  {
+		  System.out.println(" parent default constructor");
+	  }
+	  Parent(int a,int b,String s)
+	  {
+		  this.a=a;
+		  this.b=b;
+		  this.s=s;
+		   System.out.println("this is parent parametrized constructor");
+		    System.out.println("parent a: "+a);
+			System.out.println("parent b: "+b);
+			System.out.println("parent string: "+s);
+	  }
+	  
+}
+class Child extends Parent
+{
+	 int d;
+	 Child()
+	 {
+		 //super()=> super() call implicit to the parent default constructor.
+		 System.out.println(" child default constructor");
+	 }
+     Child(int a,int b,String s,int d)
+	 {
+       super(a,b,s);//  this super call explicit to the parent parameterized construtor
+       this.d=d;
+       System.out.println("this is child parametrized constructor");
+	   System.out.println("child d: "+d);
+	 }
+	 public static void main(String args[])
+	 {
+		 Child c=new Child(10,10000,"rohan",500);
+	 }
+}
+
+	 
+8.
+
+
+// implement a Interface shape using interface referecnce variable and individual object type for executing a area and perimeter method with a same name using override concept.
+
+interface Shape
+{
+    void perimeter();
+    void area();
+}
+class Circle implements Shape
+{
+    int r = 0;
+    double pi = 3.14, ar = 0;
+    //Override perimeter funtion
+    public void perimeter()
+    {
+        r = 10;
+    }
+    //Override area funtion
+    public void area()
+    {
+        ar = pi * r * r;
+        System.out.println("Area of circle:"+ar);
+    }
+}
+class Rectangle implements Shape
+{
+    int l = 0, b = 0;
+    double ar;
+    public void perimeter()
+    {
+        
+        l = 56;
+        b = 34;
+    }
+    public void area()
+    {
+        
+        ar = l * b;
+        System.out.println("Area of rectangle:"+ar);
+    }
+}
+class Square implements Shape
+{
+    int  b = 0;
+    double ar;
+    public void perimeter()
+    {
+        
+    
+        b = 4;
+    }
+    public void area()
+    {
+        
+        ar =b*b ;
+        System.out.println("Area of Square:"+ar);
+    }
+}
+public class Interface
+{
+    public static void main(String[] args)
+    {
+		//object of rectangle.
+        Rectangle obj = new Rectangle();
+        obj.perimeter();
+        obj.area();
+		//object of circle.
+		Circle obj1 = new Circle();
+        obj1.perimeter();
+        obj1.area();
+		// object of Square
+		Square obj2 = new Square();
+        obj2.perimeter();
+        obj2.area();
+    }
+}
+
+
+9.
+
+
+abstract class Parent   // abstract class
+{
+	int a;
+	Parent()
+	{
+		System.out.println("parent consrtuctor");
+	}
+   
+  abstract void fun(); 
+   void gun()
+   {
+	   System.out.println("fun method in parent class ");
+   }
+   
+}
+  class Child extends Parent  //concrete class=> in this class we give the implementation of parent abstract class
+  {
+	  // by default synthesized default constructor.
+	 void fun()
+	 {
+		 System.out.println("overrided fun method ");
+	 }
+	  
+  }
+  class Demo
+  {
+	   public static void main(String args[])
+	   {
+		   Parent p=new Child();
+		   p.fun();
+		   p.gun();
+		   
+	   }
+  }
+
+
+10.
+
+// this two method only in java=8 version.
+
+interface Sim
+{
+	
+    default void gun()
+	{
+		System.out.println("default gun method");
+	}
+    static void fun()
+	{
+       System.out.println("static fun method");
+	}		
+}
+
+class JioSim implements Sim
+{
+	
+}
+	
+class Interface
+{
+	public static void main(String args[])
+	{
+		Sim.fun();
+		//reference var of interface == object of implement class and type of interface and implementation class is same.
+		Sim airtel=new JioSim();
+		airtel.gun();
+	}
+}
+		
+  11.
+
+
+interface  Sim
+{
+	int a=17;// public ,static,final
+	 void calling();// bydefault public and abstarct.
+	 void sendsms();
+}
+// always implementation class override method are public access specifier is mustin interface.
+class JioSim implements Sim
+{
+	
+	public void calling()
+	{
+		System.out.println("jio sim calling method");
+	}
+	public void sendsms()
+	{
+		System.out.println(" jio sim send sms");
+	}
+}
+class AirtelSim implements Sim
+{
+	
+	public void calling()
+	{
+		System.out.println("Airtel sim calling method");
+	}
+	public void sendsms()
+	{
+		System.out.println(" Airtel sim send sms");
+	}
+}
+class VISim implements Sim
+{
+	
+	public void calling()
+	{
+		System.out.println("VI sim calling method");
+	}
+	public void sendsms()
+	{
+		System.out.println(" VI sim send sms");
+	}
+}
+
+class Mobile
+{
+	
+	void insertSim(Sim s)
+	{
+		s.calling();
+		s.sendsms();
+		
+	}
+}
+
+class Mobileuser
+{
+	
+	public static void main(String args[])
+	{
+		Mobile nokia=new Mobile();
+		nokia.insertSim(new JioSim());
+		
+		Mobile samsung=new Mobile();
+		samsung.insertSim(new AirtelSim());
+		
+		Mobile realme=new Mobile();
+		realme.insertSim(new VISim());
+		
+	}
+}

@@ -1,0 +1,1472 @@
+/*static local and global*/
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a ; 
+	static int b ;
+
+	Demo()
+	{
+		a = 10;
+	}
+
+	void fun()
+	{
+		//this->gun();
+		//gun();
+		//Demo::gun();
+
+		//run();
+		//this->run();
+		
+		std::cout<<"non-static function fun" << std::endl;
+		std::cout<< a << std::endl << b << std::endl;
+	}
+
+	void run()
+	{
+
+		std::cout<<"non-static function run" << std::endl;
+		std::cout<< a << std::endl << b << std::endl;
+	}
+
+	static void gun()
+	{
+		//Demo d;
+		//d.fun();
+
+		//sun();
+		//Demo::sun();
+		//d.sun();
+		std::cout<<"static function gun" << std::endl;
+		std::cout << b << std::endl;
+	}
+
+	static void sun()
+	{
+		std::cout<<"static function sun" << std::endl;
+		std::cout << b << std::endl;
+	}
+};
+
+int Demo::b = 20;
+
+int main()
+{
+	Demo d1;
+	d1.fun();
+	/*(d1.a)++;
+	(d1.b)++;
+	std::cout<<"d1-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d1.a => " << (d1.a) << std::endl <<  "d1.b => " << Demo::b << std::endl;
+	std::cout<<std::endl;*/
+
+	/*Demo d2;
+	d2.fun();
+	(d2.a)++;
+	(d2.b)++;
+	std::cout<<"d2-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d2.a => " << (d2.a) << std::endl <<  "d2.b => " << (d2.b) << std::endl;
+	std::cout<<std::endl;
+
+	Demo d3;
+	d3.fun();
+	(d3.a)++;
+	(d3.b)++;
+	std::cout<<"d3-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d3.a => " << (d3.a) << std::endl <<  "d3.b => " << (d3.b) << std::endl;
+	std::cout<<std::endl;*/
+
+	Demo::gun();
+
+	getch();
+	return 0;
+}
+
+
+
+
+/*Static programming practical*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a ; 
+	static int b ;
+
+	Demo()
+	{
+		a = 10;
+	}
+
+	void fun()
+	{
+		//this->gun();
+		//gun();
+		//Demo::gun();
+
+		//run();
+		//this->run();
+		
+		std::cout<<"non-static function fun" << std::endl;
+		std::cout<< a << std::endl << b << std::endl;
+	}
+
+	void run()
+	{
+
+		std::cout<<"non-static function run" << std::endl;
+		std::cout<< a << std::endl << b << std::endl;
+	}
+
+	static void gun()
+	{
+		//Demo d;
+		//d.fun();
+
+		//sun();
+		//Demo::sun();
+		//d.sun();
+		std::cout<<"static function gun" << std::endl;
+		std::cout << b << std::endl;
+	}
+
+	static void sun()
+	{
+		std::cout<<"static function sun" << std::endl;
+		std::cout << b << std::endl;
+	}
+};
+
+int Demo::b = 20;
+
+int main()
+{
+	Demo d1;
+	d1.fun();
+	/*(d1.a)++;
+	(d1.b)++;
+	std::cout<<"d1-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d1.a => " << (d1.a) << std::endl <<  "d1.b => " << Demo::b << std::endl;
+	std::cout<<std::endl;*/
+
+	/*Demo d2;
+	d2.fun();
+	(d2.a)++;
+	(d2.b)++;
+	std::cout<<"d2-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d2.a => " << (d2.a) << std::endl <<  "d2.b => " << (d2.b) << std::endl;
+	std::cout<<std::endl;
+
+	Demo d3;
+	d3.fun();
+	(d3.a)++;
+	(d3.b)++;
+	std::cout<<"d3-->values of non-static and static data members after increment." <<std::endl;
+	std::cout<<"d3.a => " << (d3.a) << std::endl <<  "d3.b => " << (d3.b) << std::endl;
+	std::cout<<std::endl;*/
+
+	Demo::gun();
+
+	getch();
+	return 0;
+}
+
+/*Access specifier practical*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class parent
+{
+private :
+	int a;
+protected:
+	int b ;
+public:
+	int c;
+
+	parent()
+	{
+		a = 10;
+		b = 20;
+		c = 30;
+	}
+
+	void fun()
+	{
+		std::cout<<"parent class:"<<std::endl<<a<<std::endl<<b<<std::endl<<c<<std::endl;
+	}
+};
+
+class child:parent
+{
+	int c;
+	int d;
+public:
+	void gun()
+	{
+		std::cout<<std::endl<<"child class:"<<std::endl<<b<<std::endl<<c<<std::endl;   //'parent::a' : cannot access private member declared in class 'parent'
+	}
+};
+
+class donation
+{
+	int e;
+public:
+	parent p;
+	void don()
+	{
+		std::cout<<std::endl<<"donation class:"<<std::endl<<(p.c)<<std::endl;  //'parent::b' : cannot access protected member declared in class 'parent' //'parent::a' : cannot access private member declared in class 'parent'
+	}
+};
+
+int main()
+{
+	parent p ;
+	p.fun();
+	std::cout<<"Size of parent class: "<<sizeof(p)<<std::endl;
+
+	child c;
+	c.gun();
+	std::cout<<"Size of child class: "<<sizeof(c)<<std::endl;
+
+	donation d;
+	d.don();
+	std::cout<<"Size of other class: "<<sizeof(d)<<std::endl;
+	getch();
+	return 0;
+}
+
+
+
+
+/*local and global constant*/
+
+
+#include<iostream>
+#include<conio.h>
+
+int main()
+{
+	const int a = 10;
+	int *p = const_cast<int*>(&a);
+
+	std::cout<<"Value of a before increment =>"<<a<<std::endl;
+	std::cout<<"Value of (*p) before increment =>"<<(*p)<<std::endl;
+
+	(*p)++;
+
+	std::cout<<std::endl<<"Value of a after increment =>"<<a<<std::endl;
+	std::cout<<"Value of (*p) after increment =>"<<(*p)<<std::endl;
+
+	getch();
+	return 0;
+}
+
+
+
+
+
+/*All type of constant practical*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public :
+	const int a ;
+	int b;
+	mutable int c;
+
+public :
+
+	Demo():a(10),b(20)
+	{
+		c = 30;
+	}
+
+	void fun()const
+	{
+		std::cout<<"Fun constant member function"<<std::endl;
+		std::cout<<"a:"<<a<<std::endl<<"b:"<<b<<std::endl<<"c:"<<c<<std::endl;
+		//a++;     //'a' cannot be modified because it is being accessed through a const object
+		//b++;       //'b' cannot be modified because it is being accessed through a const object
+		//Demo d;
+		//this = &d;     // left operand must be l-value
+		c++;     // we can change value of mutable data member in constant member function 
+		std::cout<<"Value of c after increment:"<<c<<std::endl<<std::endl;
+	}
+
+	void gun()
+	{
+		std::cout<<"gun non-constant member function"<<std::endl;
+	std::cout<<"a:"<<a<<std::endl<<"b:"<<b<<std::endl<<"c:"<<c<<std::endl<<std::endl;
+	}
+};
+
+int main()
+{
+	const Demo d1;
+	std::cout<<"a:"<<d1.a<<std::endl<<"b:"<<d1.b<<std::endl<<"c:"<<d1.c<<std::endl<<std::endl;
+	d1.fun();
+	//d1.gun();    //'Demo::gun' : cannot convert 'this' pointer from 'const Demo' to 'Demo &'
+	//i.e we cannnot call to non-const member function using constant object.
+
+	Demo d2;
+	d2.fun();
+	d2.gun();
+	getch();
+	return 0;
+}
+
+
+
+
+/*Copy constructor practical*/
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a;
+	int b;
+	int* p;
+
+	Demo()
+	{
+	
+	}
+
+	Demo(int a,int b,int c)
+	{
+		this->a = a;
+		this->b = b;
+		this->p = (int*)malloc(sizeof(int));
+		*(this->p) = c;
+	}
+	Demo(const Demo& other)
+	{
+		this->a = other.a;
+		this->b = other.b;
+		this->p = (int*)malloc(sizeof(int));
+		*(this->p) = *(other.p);
+	}
+};
+
+int main()
+{
+	Demo d1(10,20,30);
+	/*Demo d2(d1);
+
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d2.a="<<d2.a<<std::endl<<"d2.b="<<d2.b<<std::endl<<"d2.p="<<*(d2.p)<<std::endl<<std::endl;
+
+	d1.a++;
+	d2.b++;
+	(*(d1.p))++;
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d2.a="<<d2.a<<std::endl<<"d2.b="<<d2.b<<std::endl<<"d2.p="<<*(d2.p)<<std::endl;
+
+	Demo d3 = d1;
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d3.a="<<d3.a<<std::endl<<"d3.b="<<d3.b<<std::endl<<"d3.p="<<*(d3.p)<<std::endl<<std::endl;
+
+	d1.a++;
+	d3.b++;
+	(*(d1.p))++;
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d3.a="<<d3.a<<std::endl<<"d3.b="<<d3.b<<std::endl<<"d3.p="<<*(d3.p)<<std::endl<<std::endl;*/
+
+	Demo d4;
+	d4 = d1;
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d4.a="<<d4.a<<std::endl<<"d4.b="<<d4.b<<std::endl<<"d4.p="<<*(d4.p)<<std::endl<<std::endl;
+	d1.a++;
+	d4.b++;
+	(*(d1.p))++;
+
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d4.a="<<d4.a<<std::endl<<"d4.b="<<d4.b<<std::endl<<"d4.p="<<*(d4.p)<<std::endl<<std::endl;
+	getch();
+	return 0;
+}
+
+
+/*function chain practical*/
+
+#include<iostream>
+#include<conio.h>
+
+class demo
+{
+public:
+	int a , b;
+
+	demo& fun()
+	{
+		std::cout<<"fun member function"<<std::endl;
+		std::cout<<a<<std::endl<<b<<std::endl<<std::endl;
+		return *this;
+	}
+	demo& gun()
+	{
+		std::cout<<"gun member function"<<std::endl;
+		std::cout<<a<<std::endl<<b<<std::endl<<std::endl;
+		return *this;
+	}
+	void run()
+	{
+		std::cout<<"run member function"<<std::endl;
+		std::cout<<a<<std::endl<<b<<std::endl<<std::endl;
+	}
+	demo()
+	{
+		a = 10;
+		b = 20 ;
+	}
+};
+
+int main()
+{
+	demo d;
+	d.fun().gun().run();
+	getch();
+	return 0;
+}
+
+
+
+
+
+
+/*Assignment operator overloading - */
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a;
+	int b;
+	int* p;
+
+	Demo()
+	{
+		std::cout<<"default constructor"<<std::endl;
+	}
+
+	Demo(int a,int b,int c)
+	{
+		this->a = a;
+		this->b = b;
+		this->p = (int*)malloc(sizeof(int));
+		*(this->p) = c;
+	}
+	void operator=(const Demo& other)
+	{
+		this->a = other.a;
+		this->b = other.b;
+		this->p = (int*)malloc(sizeof(int));
+		*(this->p) = *(other.p);
+	}
+};
+
+
+int main()
+{
+	Demo d1(10,20,30);
+	Demo d4;
+	d4 = d1;       //compiler optimization of (d4 = d1) => d4.operator=(d1);   .......>here two parameters are passed to function -->one is implicit i.e &d4 and one is explicit i.e &d1
+
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d4.a="<<d4.a<<std::endl<<"d4.b="<<d4.b<<std::endl<<"d4.p="<<*(d4.p)<<std::endl<<std::endl;
+	d1.a++;
+	d4.b++;
+	(*(d1.p))++;
+
+std::cout<<"d1.a="<<d1.a<<std::endl<<"d1.b="<<d1.b<<std::endl<<"d1.p="<<*(d1.p)<<std::endl<<std::endl;
+std::cout<<"d4.a="<<d4.a<<std::endl<<"d4.b="<<d4.b<<std::endl<<"d4.p="<<*(d4.p)<<std::endl<<std::endl;
+
+	getch();
+	return 0;
+}
+
+
+/*Addition operator overloading*/
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public :
+	int a;
+	int b;
+	int c;
+
+	Demo(int a , int b , int c)
+	{
+		this -> a = a;
+		this -> b = b;
+		this -> c = c;
+	}
+
+	Demo* operator+(const Demo& other)
+	{
+		Demo* d = (Demo*)malloc(sizeof(Demo));
+
+		d -> a = this -> a + other.a;
+		d -> b = this -> b + other.b;
+		d -> c = this -> c + other.c;
+		return d;
+	}
+
+};
+
+int main()
+{
+	Demo d1(10,20,30);
+	Demo d2(40,50,60);
+
+	std::cout<<"d1.a :" << d1.a << std::endl << "d1.b :"<<d1.b << std::endl << "d1.c :"<<d1.c << std::endl<<std::endl;
+	std::cout<<"d2.a :" << d2.a << std::endl << "d2.b :"<<d2.b << std::endl << "d2.c :"<<d2.c << std::endl<<std::endl;
+
+	Demo* p = d1+d2;   // compiler optimization : d1.operator+(d2);
+	Demo d3 = *p;
+
+	std::cout<<"d3.a = d1.a+d2.a = " << d3.a << std::endl << "d3.b = d1.b+d2.b = "<<d3.b << std::endl << "d3.c = d1.c+d2.c = "<<d3.c << std::endl<<std::endl;
+	getch();
+	return 0;
+}
+
+
+
+/*Subtraction operator overloading*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public :
+	int a;
+	int b;
+	int c;
+
+	Demo(int a , int b , int c)
+	{
+		this -> a = a;
+		this -> b = b;
+		this -> c = c;
+	}
+
+	Demo* operator-(const Demo& other)
+	{
+		Demo* d = (Demo*)malloc(sizeof(Demo));
+
+		d -> a = this -> a - other.a;
+		d -> b = this -> b - other.b;
+		d -> c = this -> c - other.c;
+		return d;
+	}
+
+};
+
+int main()
+{
+	Demo d1(50,70,40);
+	Demo d2(10,20,30);
+
+	std::cout<<"d1.a :" << d1.a << std::endl << "d1.b :"<<d1.b << std::endl << "d1.c :"<<d1.c << std::endl<<std::endl;
+	std::cout<<"d2.a :" << d2.a << std::endl << "d2.b :"<<d2.b << std::endl << "d2.c :"<<d2.c << std::endl<<std::endl;
+
+	Demo* p = d1-d2;   // compiler optimization : d1.operator-(d2);
+	Demo d3 = *p;
+
+	std::cout<<"d3.a = d1.a=d2.a = " << d3.a << std::endl << "d3.b = d1.b-d2.b = "<<d3.b << std::endl << "d3.c = d1.c-d2.c = "<<d3.c << std::endl<<std::endl;
+	getch();
+	return 0;
+}
+
+
+/*Insertion operator overloadind*/
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public :
+	int a;
+	int b;
+	int c;
+
+	Demo(int a , int b , int c)
+	{
+		this -> a = a;
+		this -> b = b;
+		this -> c = c;
+	}
+
+	friend std::ostream& operator<<(std::ostream& os , const Demo& other);
+	
+};
+
+std::ostream& operator<<(std::ostream& os , const Demo& other)
+{
+	os << other.a;
+	std::cout<<std::endl;
+	os << other.b;
+	std::cout<<std::endl;
+	os << other.c;
+	return os;
+}
+
+int main()
+{
+	Demo d1(10,20,30);
+	Demo d2(40,50,60);
+	std::cout<<"data members of d1 and d2 are:"<<std::endl;
+	std::cout<<d1<<std::endl<<std::endl<<d2;   //compiler optimization--> operator<<(std::cout,d1);
+
+
+	getch();
+	return 0;
+}
+
+
+
+/*Extraction operator overloading*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a;
+	int b;
+	int c;
+
+	Demo(int a , int b , int c)
+	{
+		this -> a = a;
+		this -> b = b;
+		this -> c = c;
+	}
+
+	friend std::ostream& operator<<(std::ostream& os ,Demo& other);
+	friend std::ostream& operator<<(std::ostream& os , const Demo& other);
+};
+
+std::istream& operator>>(std::istream& is , Demo& other)
+{
+	std::cout<<"Enter value for a :"<<std::endl;
+	is >> other.a;
+	std::cout<<"Enter value for b :"<<std::endl;
+	is >> other.b;
+	std::cout<<"Enter value for c :"<<std::endl;
+	is >> other.c;
+	return is;
+}
+
+/*std::ostream& operator<<(std::ostream& os , const Demo& other)
+{
+	os << other.a;
+	std::cout<<std::endl;
+	os << other.b;
+	std::cout<<std::endl;
+	os << other.c;
+	return os;
+}*/
+
+int main()
+{
+	Demo d1(10,20,30);
+	
+	std::cin>>d1;   //compiler optimization--> operator<<(std::cout,d1);
+	std::cout<<std::endl<<"data members of d1 are:"<<std::endl;
+	//std::cout<<d1<<std::endl;
+    
+	getch();
+	return 0;
+}
+
+
+
+
+
+/*Increment operator overloading*/
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a,b,c;
+
+	Demo(int a , int b , int c)
+	{
+		this->a = a;
+		this->b = b;
+		this->c = c;
+	}
+
+	Demo& operator++()
+	{
+		(this->a)++;
+		(this->b)++;
+		(this->c)++;
+		return *this;
+	}
+
+
+
+	Demo& operator++(int)
+	{
+		Demo *d = (Demo*)malloc(sizeof(Demo));
+		*d = *this;
+
+		(this->a)++;
+		(this->b)++;
+		(this->c)++;
+		return *d;
+	}
+};
+
+int main()
+{
+	Demo d1(10,20,30);
+	std::cout<<"d1 object before increment : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+
+
+	/*Demo d2 = ++d1;   //compiler optimization d1.operator++();
+
+	std::cout<<"d1 object after pre increment : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+	std::cout<<"d2 object after pre increment : "<<std::endl;
+	std::cout<<"d2.a = "<<d2.a << std::endl <<"d2.b = "<<d2.b<<std::endl << "d2.c = " << d2.c <<std::endl<<std::endl;*/
+
+
+
+
+	Demo d3 = d1++;    //compiler optimization d1.operator++(0);
+	std::cout<<"d1 object after post increment : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+	std::cout<<"d3 object after post increment : "<<std::endl;
+	std::cout<<"d3.a = "<<d3.a << std::endl <<"d3.b = "<<d3.b<<std::endl << "d3.c = " << d3.c <<std::endl<<std::endl;
+
+
+
+	getch();
+	return 0;
+}
+
+
+
+
+
+/*decrement operator overloading*/
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a,b,c;
+
+	Demo(int a , int b , int c)
+	{
+		this->a = a;
+		this->b = b;
+		this->c = c;
+	}
+
+	Demo& operator--()
+	{
+		(this->a)--;
+		(this->b)--;
+		(this->c)--;
+		return *this;
+	}
+
+
+
+	Demo& operator--(int)
+	{
+		Demo *d = (Demo*)malloc(sizeof(Demo));
+		*d = *this;
+
+		(this->a)--;
+		(this->b)--;
+		(this->c)--;
+		return *d;
+	}
+};
+
+int main()
+{
+	Demo d1(10,20,30);
+	std::cout<<"d1 object before decrement : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+
+
+	Demo d2 = --d1;   //compiler optimization d1.operator--();
+
+	std::cout<<"d1 object after pre decrement : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+	std::cout<<"d2 object after pre decrement : "<<std::endl;
+	std::cout<<"d2.a = "<<d2.a << std::endl <<"d2.b = "<<d2.b<<std::endl << "d2.c = " << d2.c <<std::endl<<std::endl;
+
+
+
+
+	/*Demo d3 = d1--;    //compiler optimization d1.operator--(0);
+	std::cout<<"d1 object after post decrement : "<<std::endl;
+	std::cout<<"d1.a = "<<d1.a << std::endl <<"d1.b = "<<d1.b<<std::endl << "d1.c = " << d1.c <<std::endl<<std::endl;
+
+	std::cout<<"d3 object after post decrement : "<<std::endl;
+	std::cout<<"d3.a = "<<d3.a << std::endl <<"d3.b = "<<d3.b<<std::endl << "d3.c = " << d3.c <<std::endl<<std::endl;*/
+
+
+
+	getch();
+	return 0;
+}
+
+
+
+
+/*Relational operator overloading*/
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public:
+	int a,b,c;
+
+	Demo(int a , int b , int c)
+	{
+		this->a = a;
+		this->b = b;
+		this->c = c;
+	}
+
+	bool operator==(const Demo& other)
+	{
+		return (this->a == other.a && this->b == other.b && this->c == other.c);
+	}
+
+};
+
+int main()
+{
+	Demo d1(10,20,30);
+	Demo d2(10,21,30);
+
+	if(d1 == d2)
+	{
+		std::cout<<"d1 and d2 objects are completely same"<<std::endl;
+	}
+	else
+	{
+		std::cout<<"d1 and d2 objects are not same"<<std::endl;
+	}
+	
+
+	getch();
+	return 0;
+}
+
+
+
+
+
+/*Subscript operator overloading*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class Demo
+{
+public :
+	int* p;
+	int size;
+
+	Demo(int size)
+	{
+		this -> size = size;
+		this -> p = (int*)malloc(size * sizeof(int)); 
+	}
+
+	int& operator[](int index)
+	{
+		if(index < 0 || index >= size)
+		{
+			std::cout<<"Invalid Index!!!!!!";
+		}
+		else
+		{
+			return (this->p[index]);
+		}
+	}
+
+};
+
+int main()
+{
+	Demo d(5);    // array inside object       //Demo d[5];     -------> array of objects 
+	int i;
+
+	for(i = 0 ; i < 5 ; i++)
+	{
+		d[i] = i;    //compiler optimization ----> d.operator[](values(index) of i);
+	}
+
+	for(i = 0 ; i < 5 ; i++)
+	{
+		std::cout<<d[i];      
+		//this->p[index];
+	}
+
+	getch();
+	return 0;
+}
+
+
+
+/*function call operator overloading*/
+
+
+#include<iostream>
+#include<conio.h>
+
+class demo
+{
+public:
+
+	demo& operator()()
+	{
+		std::cout<<"Hello World !!!"<<std::endl<<std::endl;
+		return (*this);
+	}
+
+	demo& operator()(int a)
+	{
+		std::cout<<"a : "<<a<<std::endl<<std::endl;
+		return (*this);
+	}
+
+	demo& operator()(int a,int b)
+	{
+		std::cout<<"a : "<<a<<std::endl<<"b : "<<b <<std::endl<<std::endl;
+		return (*this);
+	}
+
+};
+
+int main()
+{
+	demo d;
+	d()(10)(20,30); //comipler optimization --->  d.operator()();
+	getch();
+	return 0 ;
+}
+
+
+#include<iostream>
+#include<conio.h>
+
+class person
+{
+	char name[20];
+	int age;
+    public:person(const char*name="",int age=0)
+	   {
+		   strcpy(this->name,name);
+		   this->age=age;
+	   }
+
+      void display()
+	  {
+		  std::cout<<"Name is= "<<this->name<<std::endl;
+		  std::cout<<"age is= "<<this->age<<std::endl;
+
+	  }
+
+};
+
+class employe:public person
+{
+	int id;
+	double salary;
+     public:employe(const char *name="",
+			int age=0,int id=0,double salary=0.0):person(name,age)//default error generate when const not come with name 
+	   {
+		  /*data member is this->*/ this->id=id;/* id is a formal parameter*/
+		   this->salary=salary;
+	   }
+		void display()
+	  {
+		  person::display();
+		  std::cout<<"id is= "<<this->id<<std::endl;
+		  std::cout<<"salary is= "<<this->salary<<std::endl;
+
+	  }
+
+};
+
+int main()
+{
+	person p1("sai",21);
+	employe e1("rohan",21,11,3000.0);
+	p1=e1;//object slicing only parent data memebr are copied in parent class object(p1) and child class data member are niglected in parent class obj at the time of copy process 
+	p1.display();
+	getch();
+	return 0;
+} 
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Employee
+{
+private:
+	    char name[20];
+		int age;
+	    int id;
+protected:
+	    float salary;
+public:
+	   Employee(const char* name="",int age=0,int id=0,float salary=0.0f)
+	   {
+		   strcpy(this->name,name);
+		   this->age=age;
+		   this->id=id;
+		   this->salary=salary;
+	   }
+	   virtual float getIncome()
+	   {
+		   return this->salary;
+	   }
+	   virtual void display()
+	   {
+		   std::cout<<"Name= "<<this->name<<std::endl;
+		   std::cout<<"Age= "<<this->age<<std::endl;
+		   std::cout<<"Id= "<<this->id<<std::endl;
+		   std::cout<<"Salary= "<<this->salary<<std::endl;
+	   }
+	   void setName(char* name)
+	   {
+		   strcpy(this->name,name);
+	   }
+	   void setAge(int age)
+	   {
+		   this->age=age;
+	   }
+	   void setId(int id)
+	   {
+		   this->id=id;
+	   }
+	   void setSalary(float salary)
+	   {
+		   this->salary=salary;
+	   }
+	   char* getName()
+	   {
+		  return this->name;
+	   }
+	   int getAge()
+	   {
+		  return this->age;
+	   }
+	   int getId()
+	   {
+		  return this->id;
+	   }
+	   float getSalary()
+	   {
+		  return this->salary;
+	   }
+};
+ 
+class Manager:public Employee
+{
+private:
+	int bonus;
+public:
+	Manager(const char* name="",int age=0,int id=0,float salary=0.0f,int bonus=0):Employee(name,age,id,salary)
+	{
+		this->bonus=bonus;
+	}
+	void setBonus(int bonus)
+	{
+		this->bonus=bonus;
+	}
+	int getName()
+	{
+		return this->bonus;
+	}
+	float getIncome()
+	   {
+		   return this->salary+this->bonus;
+	   }
+	   
+	void display()
+	{
+     Employee::display();
+     std::cout<<"Bonus= "<<this->bonus<<std::endl;
+	}
+};
+
+class Salesman:public Employee
+{
+private:
+	int incentive;
+public:
+	Salesman(const char* name="",int age=0,int id=0,int incentive=0,float salary=0.0f,int bonus=0):Employee(name,age,id,salary)
+	{
+		this->incentive=bonus;
+	}
+	void setIncentive(int incentive)
+	{
+		this->incentive=incentive;
+	}
+	int getName()
+	{
+		return this->incentive;
+	}
+	 float getIncome()
+	   {
+		   return this->salary+this->incentive;
+	   }
+	
+	void display()
+	{
+     Employee::display();
+     std::cout<<"Incentive= "<<this->incentive<<std::endl;
+	}
+};
+
+float totalSalary(Employee * arr[],int n)
+{
+	float totalsalary=0.0f;
+	for(int i=0;i<n;i++)
+	{
+	   totalsalary=totalsalary+arr[i]->getSalary();// totalincome+=arr[i]->getSalary();
+	}
+	return totalsalary;
+}
+
+float totalIncome(Employee* arr[],int n)
+{
+    float totalincome=0.0f;
+	for(int i=0;i<n;i++)
+	{
+	   totalincome=totalincome+arr[i]->getIncome();// totalincome+=arr[i]->getSalary();
+	}
+	return totalincome;
+
+}
+int main()
+{   Employee* arr[5];
+    arr[0]=new Manager("rohan",20,1,90000,5000);
+	arr[1]=new Salesman("pratik",20,2,50000,3000);
+	arr[2]=new Employee("aniket",20,3,4000);
+	arr[3]=new Manager("sanket",20,4,30000,2000);
+	arr[4]=new Salesman("ravindra",20,5,35000,1500);
+	for(int i=0;i<5;i++)
+	{
+		arr[i]->display();
+	}
+	std::cout<<"total salary= "<<totalSalary(arr,5)<<std::endl;
+	std::cout<<"total income= "<<totalIncome(arr,5)<<std::endl;
+	getch();
+	return 0;
+} 
+
+
+
+
+
+
+// Sort an Array using Bubble sort,insertion sort and selection sort
+// 1.BUBBLE SORT
+#include<iostream>
+#include<conio.h>
+
+/*template<typename T>void bubble_sort(T a[],int n)
+{
+	int i,j;
+	 T temp;
+	 for(i=1;i<n;i++)
+	 {
+		 for(j=0;j<n-i;j++)
+		 {
+			 if(a[j]>a[j+1])
+			 {
+				 temp=a[j];
+				 a[j]=a[j+1];
+				 a[j+1]=temp;
+			 }
+		 }
+	 }
+}
+int main()
+{
+	int i;
+	int a[5];
+	std::cout<<"Enter the array elements"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cin>>a[i];
+	}
+	std::cout<<"array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i];
+	}
+	bubble_sort<int>(a,5);
+	std::cout<<" sorted array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i]<<endl;
+	}
+	getch();
+	return 0;
+}*/
+
+
+//2.SELECTION SORT
+
+/*template<typename T>void selection_sort(T a[],int n)
+{
+	int i,j,temp;
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+}
+
+int main()
+{
+	int i;
+	float a[5];
+	std::cout<<"Enter the array elements"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cin>>a[i];
+	}
+	std::cout<<"array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i];
+	}
+	selection_sort<float>(a,5);
+	std::cout<<" sorted array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i]<<" "<<std::endl;
+	}
+
+	getch();
+	return 0;
+}*/
+
+//3.INSERTION SORT
+
+template<typename T>void insertion_sort(T a[],int n)
+{
+	int i,temp,empty;
+	for(i=1;i<n;i++)
+	{
+		empty=i;
+		temp=a[i];
+     while(empty>0 && a[empty-1]>temp)
+	 {
+		 a[empty]=a[empty-1];
+		 empty--;
+	 }
+	 a[empty]=temp;
+	}
+}
+int main()
+{
+	int i;
+	int a[5];
+	std::cout<<"Enter the array elements"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cin>>a[i];
+	}
+	std::cout<<"array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i];
+	}
+	insertion_sort<int>(a,5);
+	std::cout<<" sorted array elements are"<<std::endl;
+	for(i=0;i<5;i++)
+	{
+		std::cout<<a[i]<<" "<<std::endl;
+	}
+
+	getch();
+	return 0;
+}
+
+
+
+
+ #include<iostream>
+#include<vector>
+#include<conio.h>
+
+
+class Demo
+{
+public:int a;
+	   int b;
+	   int c;
+public:
+	    Demo()
+		{
+			std::cout<<"default constructor"<<std::endl;
+		}
+		Demo(int a,int b,int c):a(a),b(b),c(c)
+		{
+			 
+			std::cout<<"paramerised constructor"<<std::endl;
+		}
+		Demo(const Demo& other)
+		{
+			std::cout<<"copy constructor"<<std::endl;
+		}
+
+};
+int main()
+{
+	std::vector<Demo>v;
+	/*v.push_back({10,20,30});
+	std::cout<<v.capacity()<<std::endl;
+   std::cout<<v.size()<<std::endl;
+   v.push_back({100,200,300});
+   std::cout<<v.capacity()<<std::endl;
+   std::cout<<v.size()<<std::endl;*/
+	v.reserve(3);
+	v.emplace_back(10,20,30);
+    std::cout<<v.capacity()<<std::endl;
+   std::cout<<v.size()<<std::endl;
+   v.emplace_back(100,200,300);
+    std::cout<<v.capacity()<<std::endl;
+   std::cout<<v.size()<<std::endl;
+   std::cout<<v.max_size();
+   std::cout<<v.size();
+   getch();
+   return 0;
+}
+
+
+
+#include<iostream>
+#include<conio.h>
+
+class Power
+{
+public: int pw;
+public:
+	Power(int pw)
+	{
+		this->pw=pw;
+		std::cout<<this->pw<<std::endl;
+	}
+};
+
+class Scanner:public Power
+{
+	public: int sc;
+public:
+	Scanner(int pw,int sc):Power(pw)
+	{
+		this->sc=sc;
+		std::cout<<this->pw<<std::endl;
+	}
+
+};
+
+class Printer:public Power
+{
+	public: int pr;
+public:
+	Printer(int pw,int pr):Power(pw)
+	{
+		this->pr=pr;
+		std::cout<<this->pw<<std::endl;
+	}
+
+};
+class Xerox:public Scanner,public Printer
+{
+public: int xe;
+		Xerox(int pw,int sc,int pr,int xe):Scanner(pw,sc),Printer(pw,pr)
+		{
+			this->xe=xe;
+			std::cout<<this->xe<<std::endl;
+		}
+
+};
+
+
+int main()
+{
+	Xerox xr(1,2,3,4);
+	getch();
+	return 0;
+}
+
+

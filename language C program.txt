@@ -1,0 +1,5480 @@
+
+
+//Simple program.
+                         
+
+Q.1  write a c program to print all natural numbers from 1 to n
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,i=1;
+	printf("enter the value of n:\n");
+	scanf("%d",&n);                   // input from the user
+	while(i<=n)                        // taking condition to check natural numbers   
+	{
+		printf("%d\t",i);         // here print all the natural numbers
+		i++;                   // post increment
+	getch();
+}
+    
+//Q.2 write a c program to print all natural numbers(reverse) from n to 1
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,i=1;
+	printf("Enter the Value of n:\n");
+	scanf("%d",&n);                   // input from user 
+	while(n>=i)                      // while condition to check the reverse natural number
+	{
+		printf("%d\t",n);      // here print all the natural number in reverse order
+	        n--;                 // post decrement
+	}
+	getch();
+}
+Q.3 write a c program to print all alphabets a to z
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	char i='a';             //char is reserved keyword for character and character write in single qoat 'i'
+	while(i<='z')
+	{
+	  printf("%c\t",i);    //%c used for print character
+	  i++;
+	}
+	getch();
+}
+
+//Q.4  write a c program to print all even numbers 1 to 100 using while loop.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i=2;   
+	while(i<=100)                // check the even numbers using while loop
+	{
+	    if(i%2==0)                // using module % to get the even numbers
+            {
+               printf("%d",i);	       // print the even number upto 100                          
+            } 
+            i++;                 // post increment
+	}
+	getch();
+}
+
+//Q.5  write a c program to print all odd numbers 1 to 100 using while loop
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i=1;
+	while(i<=100)           // check the odd numbers  upto 100 using while loop
+	{
+	   if(i%2!=0)             // check the odd numbers using if condition
+           {
+             printf("%d\t",i);         // here print odd numbers upto 100
+	       } 
+           i++; 
+	}
+
+	getch();
+}
+
+//Q.6 write a c program to print  sum of all natural numbers between to n.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,sum=0;  
+        printf("Enter the value of n:");
+        scanf("%d",&n);                 // taking user input
+	for(i=1;i<=n;i++)                     // use for loop cheking intialization, condition,increment upto 100 
+	{
+		sum=sum+i;                      // addition of numbers
+	}
+	printf("Addition of natural numbers:%d",sum);        // print the sum of natural numbers upto 100
+	getch();
+}
+//Q.7  write a c program to find sum of all even numbers between 1 to n.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i=2,n,sum=0;
+	printf("Enter the value of of n:\n");
+	scanf("%d",&n);
+	while(i<=n)                         // taking conditon using while loop  for sum of even numbers
+	{
+		if(i%2==0)
+		{
+			sum=sum+i;
+		}
+		i++;
+	}
+	printf("Addition of numbers:%d",sum);
+	getch();
+}
+
+//Q.8  write a c program to find sum of all odd numbers between 1 to n.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i=1,n,sum=0;
+	printf("Enter the value of of n:\n");
+	scanf("%d",&n);
+	while(i<=n)                        // taking condition using while loop
+	{
+          if(i%2!=0)                     // != sign to get non zero value
+          {
+            sum =sum+i;	             // post increment
+ 
+            i++;
+           }	             
+        }
+	printf("Addition of numbers:%d",sum ); // print sum of all natural numbers upto n
+	getch();
+}
+
+//Q.9 write a c program to print  multiplication table of any number. 
+#include<stdio.h>
+#include<conio.h>
+	void main()
+{
+	int i,n,mul=1;                     // taking n as input  and initialize varivalr mul=1
+	printf("enter the value of n:\n");
+	scanf("%d",&n);                    // taking user input
+	for(i=1;i<=10;i++)                         // using for loop for multiplcation table
+	{ 
+		mul=n*i;
+		printf("multiplication is:%d\n",mul);
+	}
+	getch();
+}
+
+//Q.10 write a c program to count  number of digit in a numbers
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,count=0;                      // value initialize to count is 0
+	printf("Enter the value of n:\n");
+	scanf("%d",&n);
+	while(n>0)                         // using while condition  where n is greater than 0
+	{  
+		n=n/10;                 // input number divide by 10 and get n value
+		count++;               // post increment 
+	}
+	printf("count of a numbers:%d",count);
+	getch();
+}
+//Q.10 write a c program to count  number of digit in a numbers
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,count=0;                      // value initialize to count is 0
+	printf("Enter the value of n:\n");
+	scanf("%d",&n);
+	while(n>0)                         // using while condition  where n is greater than 0
+	{  
+		n=n/10;                 // input number divide by 10 and get n value
+		count++;               // post increment 
+	}
+	printf("count of a numbers:%d",count);
+	getch();
+}
+
+//Q.11 A c  program to find first and last digit of a number
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int ld,n,fd;                           // n is a input to find first and last digit
+	printf("enter the value of n:\n");
+	scanf("%d",&n);                 // taking input form user
+	ld=n%10;                        // % sign use to find last digit 
+	while(n>=10)                   // input must be greater than the 10
+	{
+	  n=n/10;                      //n is use to  find the first number
+	}
+	fd=n;
+	printf("first digit:%d\n",fd);  // print first number
+	printf("Last digit:%d",ld);       // print last number
+	getch();
+}
+
+//Q.12  sum of first digit and last digit
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int ld,n,sum=0,fd;                 // taking sum=0 for addtion of first and last digit 
+	printf("enter the value of n:\n");
+	scanf("%d",&n);  
+	ld=n%10;
+	while(n>=10)
+	{
+		n=n/10;
+	}
+	fd=n;
+	sum=ld+fd;                                       //taking sum for addtion of first and last number
+	printf("Addition of first and last digit:%d",sum);            // answer find here
+	getch();
+}
+
+//Q.14  A c program to calculate  sum of digits of a number
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,rem,sum=0;                      // taking int n as a input form user
+	printf("enter the value of n:\n");
+	scanf("%d",&n);                    // taking input
+	while(n>0)                       // use while condition perform a addition of digits in given number
+	{
+		 rem=n%10;                   // using % module  find last digit of number
+		 sum=sum+rem;                // find sum of digit of a number
+		 n=n/10;                 //find first digit of a number
+	}
+	printf("Addition of a numbers:%d",sum);
+	getch();
+}
+
+//Q.15 product of a digit numbers
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,rem,mul=1;                         // taking mul=1 to find the multiplication of a digit numbers 
+	printf("enter the value of n:\n");
+	scanf("%d",&n);
+	while(n>0)
+	{
+		 rem=n%10;               // condition to find last number
+		 mul=mul*rem;            // find the multiplication of digit number
+		 n=n/10;
+	}
+	printf("Multiplication of a numbers:%d",mul); // getting the product of given digit of number
+	getch();
+}
+
+//Q.16 write a c program to enter a number and print its reverse
+#include<stdio.h>
+void main()
+{
+	int n,rem,rev=0;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	while(n>0)                      // taking while condition as n is greater than 0
+	{
+		rem=n%10;               // find last number
+		rev=rev*10+rem;        // reverse the given digit of a number
+		n=n/10;
+	}
+	printf("Reverse number is :%d",rev); // here getting the reverse digit of a number
+	getch();
+}
+//Q.17 program to check whether a number is pallindrome or not
+#include<stdio.h>
+void main()
+{
+	int n,rem,rev=0,temp;
+	printf("Enter the value of n:");
+	scanf("%d",&n);                    // getting  input to user
+	temp=n;                       // stored the value of n in new variable temp
+	while(n>0)
+	{
+		rem=n%10;
+		rev=rev*10+rem;      // reverse the number
+		n=n/10;
+	}
+	if(temp==rev)                  // using if condition when the given number is pallindrome
+	{
+		printf("the given number is pallindrome");
+	}
+	else                     //  else condition used when if condition is not satisfy
+	{
+		printf("the given number is not pallindrome");
+	}
+	getch();
+}
+Q.18 write a C program to find frequency of each digit in given integer
+#include<stdio.h>
+void main()
+{
+	int n,temp,count=0,rem,i;
+	printf("enter value of n:");
+	scanf("%d",&n);
+	temp=n;
+	for(i=1;i<10;i++)    // here using for loop  checking the 1 to 9 with the given number of digit
+	{
+		temp=n;
+		count=0;
+		while(temp>0)  // using while loop checking frequency of each digit of  a number
+		{
+			rem=temp%10;
+		if(rem==i)      // using if conditon getting the freuency of each digit of a number
+			{
+				count++;
+			}
+			temp=temp/10;
+		}
+		if(count>0) 
+			printf("%d=%d\t",i,count);  // here print each digit and its count
+	}
+	getch();
+}
+
+//Q.19 Write a c program to enter a number and print it in word.
+#include<stdio.h>
+void main()
+{
+	int n,num=0;                    // getting n as input and num is equal to 0 
+	printf("Enter the value of n:");
+	scanf("%d",&n);                    // taking input from the user
+	// taking while condition n is not equal to 0 and reverse the given number
+	while(n!=0)
+	{ 
+		num=(num * 10)+(n % 10);    //by using formula find int sum .
+		n=n / 10;
+	}
+	while(num!=0)
+	{
+		switch(num % 10)        // used the switch case to print numbers in words
+		{
+		   case 0:                   // when case 0 is satisfy  then print the zero
+				   printf("ZERO");
+				   break;
+		   case 1:                  // case 1 satisfy then print the one
+				   printf("ONE ");
+				   break;
+
+		   case 2:
+				   printf("TWO ");
+				   break;
+		   case 3:
+				   printf("THREE ");
+				   break;
+		   case 4:
+				   printf("FOUR ");
+				   break;
+		   case 5:
+				   printf("FIVE ");
+				   break;
+		   case 6:
+				   printf("SIX ");
+				   break;
+		   case 7:
+				   printf("SEVEN ");
+				   break;
+		   case 8:
+				   printf("EIGHT ");
+				   break;
+		   case 9:
+				   printf("NINE ");
+				   break;
+		}
+		num=num / 10;
+	}
+	getch();
+}
+
+
+//Q.20 program to print all ASCII character with their values
+#include<stdio.h>
+void main()
+{
+	int i;
+	printf("print all ascii value between 1 to 255");
+	for(i=1;i<=255;i++)                                // using for condition print the ASCII value upto 255
+	{
+		printf("%d=%c\t",i,i);                      // 1 nto 255 ASCII value convert into the character 
+	}
+	getch();
+}
+
+Q.21 write a C program to find power of a number using for loop
+#include<stdio.h>
+void main()
+{
+	int i,x,y,ans=1;                // here initalize ans =1 for multiply the x number 
+	printf("Enter the value of x:");
+	scanf("%d",&x);
+	printf("Enter the value of y:");
+	scanf("%d",&y);
+    for(i=1;i<=y;i++)       // taking for loop  upto y  because  calculate the power upto y number 
+	{
+		ans=ans*x;
+	}
+	printf("Power of a number is:%d",ans);      //  here get the power of any number
+	getch();
+}
+
+Q.22 write a C program to find all factors of a number
+#include<stdio.h>
+void main()
+{
+	 int i,n;                          // getting int n as user input
+	 printf("Enter the value of n:");      // getting  input user
+	 scanf("%d",&n);
+	 for(i=1;i<=n;i++)                 //using for loop calculate the factor upto n   
+	 {
+		 if(n%i==0)      // using module get the perfect number which is factor of n
+		 {
+			 printf("%d\t",i);  // here getting all factor upto n
+		 }
+	 }
+	 getch();
+ }
+	
+Q.23 write a C program to calculate factorial of a number
+#include<stdio.h>
+void main()
+{
+	int i,n,ans=1;
+	printf("Enter the value of n:");   
+	scanf("%d",&n);                 // taking input user 
+	for(i=1;i<=n;i++)
+	{
+		ans=ans*i;    // stored  the  multplication  of  i upto n number
+	}
+	printf("factorial of a given number is:%d",ans);
+	getch();
+}
+Q.24 write a C program to find gcd of two numbers
+#include<stdio.h>
+#include<conio.h>
+	void main()
+{
+	int n1,n2,i,GCD,min;
+	printf("Enter the value of n1:"); // taking n1 as input user
+	scanf("%d",&n1);
+	printf("Enter the value of n2:"); // taking n2 as input user
+	scanf("%d",&n2);
+	if(n1>n2)                // checking if condition for smallest value between n1 and n2
+	{
+		min=n2;
+	}
+	else
+	{
+		min=n1;
+	}
+	for(i=1;i<=n1;i++) // using for loop for calculate the gcd number upto smallest value n1
+	{
+		if(n1%i==0 && n2%i==0)  // using logical And to check two condition true or false 
+		{
+			GCD=i;
+		}
+	}
+	printf("%d",GCD);        // here print the GCD  of given two numbers
+	getch();
+}
+
+ Q.25 write a C program to find LCM of two numbers
+#include<stdio.h>
+void main()
+{
+	int n1,n2,max;  
+	printf("Enter the value of n1:");     // taking n1 user input 
+	scanf("%d",&n1);
+	printf("Enter the value of n2:");   // taking n2 user input    
+	scanf("%d",&n2);
+	max=(n1>n2)?n1:n2;   // use the conditional operator to get maximum number 
+	while(1)     // use the while contion in infinte times
+	{
+		if( max%n1==0 && max%n2==0)   // check the if  condition  to get perfect divisible of max number
+		{
+			break;            // use to break the while  condition because while loop is in infinite times
+		}
+		max++;             // increment of max 
+	}
+	printf("LCM of two numbers is:%d",max);   // here get the LCM of given two numbers
+	getch();
+}
+
+
+Q.26 write a c program check whether number prime or not
+#include<stdio.h>
+void main()
+{
+	int n,i,count=0;                   // initalize count =0 
+	printf("Enter the value of n:");   // taking user input
+	scanf("%d",&n);
+	for(i=2;i<=n;i++)          // taking for condition check the number prime 
+	{
+		if(n%i==0)       // taking if condition to check number is prime or not
+		{
+			count++;
+		}
+	}
+		if(count==1)
+		{
+			printf("Given number is prime:%d",n);     //here print the prime number
+		}
+		else                                         // when if condition is not satisfy then use else 
+		{
+			printf("Given number is not a prime");
+		}
+	
+	    getch();
+}
+
+Q.27 write a C program to print all prime number upto 1 to n
+#include<stdio.h>
+	void main()
+{
+	int n,i,a,count=0;
+	printf("Enter the value of n:");
+	scanf("%d",&n);                       // taking n as user input
+	for(a=2;a<=n;a++)                      // taking for conditon check the prime number upto n
+	{
+		count=0;
+	    for(i=2;i<=a;i++)              // taking another for condition  check the single number prime or not upto n 
+		{
+			if(a%i==0)               // taking  if condition to check perfect prime number
+			{
+				count++;            // post increment 
+			}
+		}
+
+			if(count==1)
+			
+				printf("%d\t",a);       // here print all the prime number upto n 
+		
+	}
+	getch();
+}
+
+  Q.28  write a C program  to find sum of all prime numbers
+
+   #include<stdio.h>
+    void main()
+	{
+	   int n,i,a,count=0,sum=0;
+	   printf("Enter the value of n:");
+	    scanf("%d",&n);                       // taking n as user input
+	   for(a=2;a<=n;a++)              // taking for conditon check the prime number upto n
+	   {
+		  count=0;
+	      for(i=2;i<=a;i++)            // taking another for condition  check the single number prime or not upto n 
+		  {
+			 if(a%i==0)           // taking  if condition to check perfect prime number
+			 {
+			  	count++;          // post increment 
+			 }
+		  }
+		 if(count==1)
+		 {
+			
+			sum=sum+a;
+		 }
+	   }
+	   printf("sum of all prime numbers is:%d",sum);
+	   getch();
+}
+Q.29 Write a c program to find prime factors of a number
+#include<stdio.h>
+void main()
+{
+	int n,i,count;    
+	int a;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)               // taking for condition checking the condition 1 upto n
+	{
+        count=0;       
+		if(n%i==0)                // taking if condition for checking the perfect factor of n
+		{
+			for(a=1;a<=i;a++)      // taking  for loop check the prime number upto i
+			{
+				if(i%a==0)   // using if condition checking a single number prime or not
+				{                                                      
+					count++;
+				}
+
+			}
+		}
+	
+        if(count==2)
+	   {
+        	printf("%d\t",i);   // here print the prime factor 
+	
+	   }
+     }
+	getch();
+}
+
+Q.30  write a c program to check whether a number is armstrong number or not
+
+#include<stdio.h>
+void main()
+	{
+	   int n,temp,i,count=0;
+         int sum=0,ans=1,rem;
+         printf("Enter the value of n:");
+         scanf("%d",&n);                  // taking input user
+         temp=n;             // stored the original value in temp variable
+         while(temp!=0)    // using while condition count the number of digit
+        {
+	      temp=temp/10; 
+         	count++;
+        }
+		 temp=n;
+         while(temp!=0) // using while condition for the temp variable
+         {
+	          rem=temp%10;
+	          for(i=1;i<=count;i++)  // taking for loop upto the count of a given number
+	          {
+		            ans=ans*rem;   // here checking the power of number of digit 
+	          }
+	          sum=sum+ans;
+	          temp=temp/10;
+                ans=1;
+         }
+        if(n==sum)
+        {
+	         printf("number is armstrong");
+        }
+        else
+        {
+	       printf("number is not armstrong");
+        }
+		getch();
+   }
+
+
+Q.31 Write a C program to print all Armstrong numbers between 1 to n
+#include<stdio.h>
+void main()
+{
+	int n,temp,count=0;
+	int ans=1,sum=0;
+	int rem,i,a;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	for(a=1;a<=n;a++)   // here using for condition print the armstrong number upto n
+	{
+	temp=a;
+	while(temp!=0)    // using another while condition  count the number of digit 
+	{
+		temp=temp/10;
+		count++;
+	}
+	temp=a;
+	while(temp!=0)
+	{
+		rem=temp%10;
+		for(i=1;i<=count;i++)
+		{
+			ans=ans*rem;
+		}
+		sum=sum+ans;
+		temp=temp/10;
+		ans=1;
+	}
+	if(a==sum)
+	{
+		printf("%d\t",a);
+	}
+	count=0;     // count is again initialize zero for every digit of a number
+	sum=0;       //  sum is again initialze zero
+	}
+	getch();
+}
+
+Q.32  Write a C program to check whether a number is perfect number  or not
+#include<stdio.h>
+void main()
+{
+	int n,i,sum=0;
+	printf("Enter the value of n:");
+	scanf("%d",&n);                // taking input user
+	for(i=1;i<n;i++)                // taking for condition check the perfect number of the n value                  
+	{
+		if(n%i==0)       // taking module of get the perfect numebr which is factor of n
+		{
+			sum=sum+i;
+		}
+	}
+	if(n==sum)    // using if condition get the perfect number
+	{
+		printf("Number is perfect number");
+	}
+	else     // when if condtion is not satisfying then check the else condition
+	{
+		printf("number is not perfect number");
+	}
+	getch();
+}
+Q.33 write a C program to print all perfect numbers between 1 to n 
+#include<stdio.h>
+void main()
+{
+	int n,i,sum=0,a;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	for(a=1;a<=n;a++)    // using for condition check the perfect number upto n
+	{
+
+	   for(i=1;i<a;i++)    // uisng another for condition check single number upto n             
+	   {
+		  if(a%i==0)
+		  {
+			sum=sum+i;
+	      }
+	   }
+	   if(a==sum)
+	   {
+		 printf("%d\t",a);   // here print the all perfect number upto n
+	   }
+	    sum=0;
+	}
+	getch();
+}
+ Q.34 write a C program to check whether a number is strong number or not
+
+#include<stdio.h>
+void main()
+{
+	int n,temp,mul=1;
+	int sum=0,i;
+	int rem;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	temp=n;    
+	while(n!=0)    // here using while condition to check number is strong number
+	{
+		rem=n%10;
+		for(i=1;i<=rem;i++)  // using for condition check the factorial upto rem
+		{
+			mul=mul*i;    // here calculate the factorial 
+		}
+		sum=sum+mul;
+		n=n/10;
+		mul=1;  // here again mul initialize 1 for next digit of number 
+	}
+	if(temp==sum)  // here if condition check the strong number
+	{
+		printf("Given number is strong number");
+	}
+	else
+	{
+		printf("Given number is not armstrong number");
+	}
+	getch();
+}
+Q.35 write a c program to print all strong number between 1 to n
+#include<stdio.h>
+void main()
+{
+	int n,temp,mul=1;
+	int sum=0,i;
+	int rem,a;
+	printf("Enter the value of n:");
+	scanf("%d",&n);
+	for(a=1;a<=n;a++)    // using for condition check the strong number upto n
+	{
+		temp=a;
+		while(temp!=0)    
+	    {
+		   rem=temp%10;
+		   for(i=1;i<=rem;i++)  
+		  {
+			 mul=mul*i;    // here calculate the factorial 
+		  }
+		  temp=temp/10;
+		  sum=sum+mul;   
+		  mul=1;  // here again mul initialize 1 for next digit of number 
+	    }
+	    if(a==sum)  // here if condition check the strong number
+	    {
+		  printf("%d\t",a);
+	    }
+		sum=0; 
+	}
+	getch();
+}
+
+Q.36 write a C program to print fibonacci series upto n terms. 
+#include<stdio.h>
+void main()
+{
+	int n,i,n1=0,n2=1,n3; // initalize n1 zero and n2 one  
+	printf("enter the value of n:");
+	scanf("%d",&n);                //  taking input
+	printf("%d\t%d\t",n1,n2);  
+	for(i=1;i<=n;i++)      // using for loop print serise upto n terms
+	{
+		n3=n1+n2;        // addition of 1st and 2nd  stored n3 variable
+		printf("%d\t",n3);
+		n1=n2;           // assigning the value n2 to the n1
+		n2=n3;
+	}
+	getch();
+}
+
+
+
+  ARRAY PROGRAM
+
+ 
+
+//Q.1 .Write a C program to find the sum of all the elements of an array.
+#include<stdio.h>
+void main()
+{
+int a[100],n,i,sum=0;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:");
+ for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+for(i=0;i<n;i++)
+{
+sum=sum+a[i];
+}
+printf("sum of array elements%d\n",sum);
+getch();
+}
+//Q.2 An array consist of Integers. Write a C program to count the number of elements 
+less than, greater than and equal to zero.
+#include<stdio.h>
+void main()
+{
+int a[100],n,i,positive_count=0,negative_count=0,zero_count=0;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+ for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+for(i=0;i<n;i++)
+{
+if(a[i]>0)
+{
+positive_count++;
+}
+ else if(a[i]<0)
+ {
+ negative_count++;
+ }
+ else if(a[i]==0)
+ {
+ zero_count++;
+ }
+}
+printf("posive count in array elements;%d\n",positive_count);
+printf("negative count in array elements;%d\n",negative_count);
+printf("zero count in array elements;%d\n",zero_count);
+getch();
+}
+//Q.3 Write a C program that return the positions of the pallindrome element in array.
+#include<stdio.h>
+void main()
+{
+int a[100],n,i,rev=0,rem,temp,flag=0;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+ for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("print all the pallindrome number in given array elements:\n");
+for(i=0;i<n;i++)
+{
+temp=a[i];
+rev=0;
+while(temp>0)
+{
+rem=temp%10;
+rev=rev*10+rem;
+temp=temp/10;
+}
+if(a[i]==rev)
+{
+flag=1;
+printf("%d\n",a[i]);
+}
+}
+if(flag==0)
+{
+printf("number is not pallindrome");
+}
+getch();
+}
+// Q4.Write a C program to sort first half of array in ascending order and second half of 
+array in descending order.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],,n,i,j,temp=0,mid;
+printf("enter how many array elements do you want:");
+printf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+mid=n/2;
+for(i=0;i<n;i++)
+{
+for(j=0;j<mid;j++)
+{
+if(a[i] < a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+ for(j=mid+1;j<n;j++)
+{
+if(a[i] > a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+printf("sorted array elements in ascending and descending order:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+getch();
+}
+//Q.5 Write a C program to copy the elements of one array into another array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],b[100],i,n;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+for(i=0;i<n;i++)
+{
+b[i]=a[i];
+}
+printf("copied array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",b[i]);
+}
+getch();
+}
+//Q.6 Write a C program to sort only even numbers in given array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],b[100],n,i,k=0,count=0;
+int j,temp;
+printf("please enter how many array elemenmts you want:\n");
+scanf("%d",&n);
+printf("enter array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+for(i=0;i<n;i++)
+{
+if(a[i]%2==0)
+{
+b[k]=a[i];
+k++;
+count++;
+}
+}
+for(i=0;i<count;i++)
+{
+for(j=i+1;j<count;j++)
+{
+if(b[i]>b[j])
+{
+temp=b[i];
+b[i]=b[j];
+b[j]=temp;
+}
+}
+}
+k=0;
+for(i=0;i<n;i++)
+{
+if(a[i]%2==0)
+{
+a[i]=b[k];
+k++;
+}
+}
+printf("even sort array elements:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+getch();
+}
+//Q.7 Write a program in C to separate odd and even integers in same array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],b[100],c[100],i,n,count=0,count1=0,j=0,k=0;
+printf("enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+j=0;
+count=0;
+for(i=0;i<n;i++)
+{
+if(a[i]%2==0)
+{
+b[j]=a[i];
+j++;
+count++;
+}
+}
+k=0;
+count1=0;
+for(i=0;i<n;i++)
+{
+if(a[i]%2!=0)
+{
+c[k]=a[i];
+k++;
+count1++;
+}
+}
+printf("array elements:\n");
+for(i=0;i<count;i++)
+{
+printf("%d",b[i]);
+}
+for(i=0;i<count1;i++)
+{
+printf("%d",c[i]);
+}
+getch();
+}
+//Q.8 Write a program in C to count the frequency of each element of an array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,count=0,j;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("frequency of digit count is:\n");
+for(i=0;i<n;i++)
+{
+count=0;
+ for(j=0;j<n;j++)
+ {
+ if(a[i]==a[j])
+ {
+ count++;
+ }
+ }
+ printf("%d=%d\t",a[i],count);
+}
+ getch();
+}
+//Q.9 Write a program in C to print all unique elements in an array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,count=0,j;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("unique elements in the given array elements:\n");
+for(i=0;i<n;i++)
+{
+count=0;
+ for(j=0;j<n;j++)
+ {
+ if(a[i]==a[j])
+ {
+ count++;
+ }
+ }
+ if(count==1)
+ {
+ printf("%d\n",a[i]);
+ }
+}
+getch();
+}
+//10. Write a program in C to insert New value in the array (sorted list ).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,k,j,temp;
+printf("enter the value for insert:\n");
+scanf("%d",&k);
+printf("enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+a[n]=k;
+for(i=0;i<n+1;i++)
+{
+for(j=i+1;j<n+1;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+printf("insert the new value in sorted list:\n");
+for(i=0;i<n+1;i++)
+{
+printf("%d\n",a[i]);
+}
+getch();
+}
+//Q.11 write a program in C to delete an element at desired position from an array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,k;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("enter the position to delete a array element:\n");
+scanf("%d",&k);
+i=k;
+for(i=k;i<n-1;i++)
+{
+a[i]=a[i]+1;
+}
+printf("array elements are after delete array element in given array:\n");
+for(i=0;i<n-1;i++)
+{
+printf("%d\n",a[i]);
+}
+getch();
+}
+//Q.12 Write a program in C to find the maximum /minimum element in an array
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,max,min;
+printf("enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+max=a[0];
+for(i=0;i<n;i++)
+{
+if(max < a[i])
+{
+max=a[i];
+}
+}
+printf("maximum number is:%d",max);
+min=a[0];
+for(i=0;i<n;i++)
+{
+if(min > a[i])
+{
+min=a[i];
+}
+}
+printf("\nminimum number is:%d",min);
+getch();
+}
+//Q.13 Write a program in C to find the second largest element in an array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,count=0,j;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+ printf("second largest element in given array elements:\n");
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+printf("%d",a[n-2]);
+getch();
+}
+//Q.14 Write a C Program to Find the Number of Elements in an Array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,count=0;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+count++;
+}
+printf("number of array elements in an array:%d\n",count);
+getch();
+}
+//16. Write a C Program to Print the Alternate Elements in an Array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n;
+printf(" enter the how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("print the alternate array elements:\n");
+for(i=0;i<n;i=i+2)
+{
+printf("%d\n",a[i]);
+}
+getch();
+}
+//Q.17 Write a C Program to Find 2 Elements in the Array such that Difference between 
+them is Largest.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,j,temp;
+printf("enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+printf("2 Elements in the Array such that Difference between them is 
+Largest:\n%d\t%d",a[0],a[n-1]);
+getch();
+}
+// Q.19 Write a C program to store squares of the elements in the same array.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+ printf(" After squaring array elements:\n");
+for(i=0;i<n;i++)
+{
+a[i]=a[i]*a[i];
+printf("%d\n",a[i]);
+}
+getch();
+} 
+//Q.20. Write C Program to Find the two Elements such that their Sum is Closest to given 
+number.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],i,n,k,j;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+printf("enter the array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",a[i]);
+}
+printf("enter a number to find the number closed to it:\n");
+ scanf("%d",&k);
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]+a[j]>=k || a[i]+a[j]<=k)
+{
+printf("%d and %d is near to %d.\n",a[i],a[j],k);
+break;
+}
+}
+}
+getch();
+}
+ 
+ 
+STRING PROGRAM
+
+Name :- Gore Rohan Baban ROLL NO:- 129 Topic:-STRING
+Q.1 write a C program to accept string with multiple spaces from user and print as it 
+is.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[20]; //using charater string
+printf("please enter a string:\n"); // taking string from keyboard
+fgets(str,sizeof(str),stdin); // only in string taking input from user 
+using fgets function 
+printf("Given string is;\n"); 
+printf("%s",str); // print the given input
+getch();
+}
+Q.2.Write a C program to accept string with multiple spaces from user and print it 
+with a sinlge space as a delimiter.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i; //using charater string
+printf("please enter a string:\n"); // taking string from keyboard
+fgets(str,sizeof(str),stdin); 
+printf("Given string is;\n"); 
+printf("%s",str); 
+i=0; // initalize value i is 0
+while(str[i]!='\0') // taking while condition where str[i] not equal to 
+'\0'
+{
+while(str[i]==' ') // str[i] is equal equal to space
+{
+i++; // post increment
+}
+if(str[i]!=' ') // taking if condition skip the space and print 
+the character 
+{
+printf("%c",str[i]);
+i++;
+}
+if(str[i]==' ') // taking another if condition get only one space 
+between character in given string 
+{
+printf(" ");
+i++;
+}
+}
+getch();
+}
+Eg: Input String: _____India_____is_my_________country______________ Output String: 
+India_is_my_country (Consider _ as space) 
+Or 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i,count=0;
+printf("please enter the string:\n");
+fgets(str,sizeof(str),stdin); // taking string from user
+printf("given string is:\n");
+printf("%s",str);
+i=0;
+printf("given string without multiple space is:\n");
+ while(str[i]!='\0') // using while string goes to \0
+{
+while(str[i]==' ') // using another while loop remove the multiple spaces
+{
+i++;
+}
+while(str[i]!=' ' &&str[i]!='\0') // using logical && checking two 
+condition str[i] not equal to space and str[i] not equal to \0
+{
+printf("%c",str[i]); // print only character
+if(str[i+1]==' ') // using if condition adding one space between to 
+string 
+{
+printf(" ");
+}
+i++;
+}
+}
+getch();
+}
+Q.3 Write a C program to print count of number characters in given string.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i,count=0; // initialze count 0 for counting the 
+character in given string 
+printf("please enter the string:\n");
+fgets(str,sizeof(str),stdin); // string it take input from user
+printf("given string is:\n");
+printf("%s",str);
+i=0;
+ while(str[i]!='\0') // using while loop string is break at \0
+{
+while(str[i]==' ') // using while loop skip the spaces before the 
+character 
+{
+i++;
+}
+while(str[i]!=' ' &&str[i]!='\0') // checking two condtion not equal to 
+space and not equal to \0 then counting the char
+{
+count++;
+i++;
+}
+}
+printf("count of given string:%d",count-1); // print the count in given string
+getch();
+}
+Q.4 Write a C program to accept string and print it in the reverse order.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i,count=0; // intialze count 0 for counting the character 
+in given string 
+printf("please enter the string:\n");
+fgets(str,sizeof(str),stdin); // string it take input from user
+printf("given string is:\n");
+printf("%s",str);
+i=0;
+while(str[i]!='\n') // using while loop counting the character
+{
+count++;
+i++;
+}
+printf("reverse string is:\n");
+while(count>=0) // using another while loop for reverse the 
+string 
+{
+printf("%c",str[count]); // print string in reverse order
+count--; // post decrement for print the character in 
+reverse order
+}
+getch();
+}
+Eg: Input String: India is my country
+Output String: yrtnuoc ym si aidnI
+
+Q.5.Write a C program to count count of number of vowels and number of consonants in the 
+given string.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i,p=0,q=0; 
+printf("please enter a string:\n"); 
+fgets(str,sizeof(str),stdin); // taking input from the user
+printf("Given string is;\n"); 
+printf("%s",str); 
+for(i=0;str[i] !='\n';i++) // taking loop condition
+{
+if(str[i]=='a' || str[i]=='e' ||str[i]=='i' ||str[i]=='o' ||str[i]=='u'|| 
+str[i]=='A' ||str[i]=='E' ||str[i]=='I' ||str[i]=='O' ||str[i]=='U')
+// taking if condtion to count only vowels in given string
+{
+p++;
+}
+else if(str[i]!=' ') // if condition not satisfy come in else if condition 
+and count consonants
+{
+q++;
+}
+}
+printf("vowels are:%d\n",p); // print vowels
+printf("consonants are:%d\n",q); // print consonants
+getch();
+}
+Q.6 Write a C program to reverse a given string as below.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,j=0;
+printf("please enter string:\n");
+fgets(str,sizeof(str),stdin); // taking input from user 
+printf("Given string is:\n");
+printf("%s",str);
+while(str[i]!='\n') 
+{
+while(str[i]==' '&&str[i]!='\n') // using while loop removing spaces 
+before character && string break upto \n
+{
+i++;
+}
+while(str[i]!=' ' && str[i]!='\n') // using while loop removing char 
+upto after spaces && string break upto \n
+{
+i++;
+}
+j=i-1; // using j reverse the string
+printf(" reverse string is:\n");
+while((str[j]!=' ' && j!=0)) // reverse string using && j break upto 
+0
+{
+printf("%c",str[j]);
+j--; // post decrement 
+}
+printf(" "); // space between to string
+}
+getch();
+}
+Eg:
+Input String: India is my country
+Output String: aidnI si ym yrtnuo
+
+
+Q.7 Write a C program to replace space with ‘$’ in given string.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i; 
+printf("please enter a string:\n"); 
+fgets(str,sizeof(str),stdin); 
+printf("Given string is;\n"); 
+printf("%s",str); 
+i=0;
+printf("the string is:\n");
+while(str[i]!='\n') 
+{
+while(str[i]==' ') // using while loop skip the spaces before char
+{
+i++; 
+}
+if(str[i]!=' ') // using if conidtion print only character in 
+given string
+{
+printf("%c",str[i]);
+i++;
+}
+if(str[i]==' ') // using another if condition replace the $ 
+symbol by space 
+{
+printf("$");
+i++;
+}
+}
+getch();
+} 
+// or without skip multiple spaces 
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i; 
+printf("please enter a string:\n"); 
+fgets(str,sizeof(str),stdin); 
+printf("Given string is;\n"); 
+printf("%s",str); 
+i=0;
+while (str[i] != '\0') //taking while loop
+ { 
+ if (str[i] == ' ') // is str is equal equal to space the go next 
+condition
+ { 
+ printf("$"); //print the $ in space.
+ i++; 
+ } 
+ printf("%c", str[i]); //the given answer get here
+ i++; // post increment 
+ }
+getch();
+} 
+Eg: Input String: India is my country 
+Output String: India$is$my$coutry
+
+Q.8 Write a program which accept sentence from user and print number of words from that 
+sentence.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i;
+int count=0;
+printf("please enter a string:\n"); 
+fgets(str,sizeof(str),stdin); 
+printf("Given string is;\n"); 
+printf("%s",str); 
+i=0;
+while(str[i]!='\n')
+{
+while(str[i]==' ') // using while loop removing space
+{
+i++;
+}
+if((str[i]!=' ' && str[i+1]==' ') || str[i]=='\n') // using if condition 
+count the character in given string 
+{
+count++;
+}
+if(str[i]!=' ' && str[i+1]=='\n') // using another if condition count 
+the character 
+{
+count++;
+}
+i++;
+}
+printf("count of given string:%d",count); // print the count of given string
+getch();
+}
+
+/*Input String: India_is_my_country
+Output: 4
+Input String:
+______India______is____my____country____ 
+(Consider _ as space)*/
+
+//Q.9 Write a C program to replace Good names in mail.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100]="Hello sangmner"; // initialize char string
+char strreplace[100];
+int i=0;
+int j=0;
+printf("please enter 2nd string:\n"); 
+fgets(strreplace,sizeof(strreplace),stdin); // taking another string from 
+user for coping one word
+printf("given string is:\n");
+printf("%s",strreplace);
+printf("modified string is;\n");
+while(str[i]!='\n')
+{
+ while(str[i]!=' ') // using while skip hello word in initailize string and 
+while stop to space
+ {
+i++;
+ } // after getting space then
+ while(str[i]!='\n') // using another while loop copy one word in initilaize 
+string
+ {
+ i++;
+ str[i]=strreplace[j]; // copy the word
+ j++;
+ }
+ str[i+1]='\0'; // for stop copy word upto \0 in str[i]
+ printf("%s",str);
+}
+getch();
+}
+Raw String: Hello GoodName
+Input String: India
+Output String: Hello India
+Input String: Sangamner
+Output String: Hello Sangamner
+
+//Q.11 Write a C program which accepts a string from user which contains a characters from ‘b’ to ‘y’.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin); // user input string 
+printf(" given string is:\n");
+printf("%s",str);
+printf("modified string is:\n");
+while(str[i]!='\n')
+{
+if((str[i]>='b' && str[i]<='y')|| str[i]==' ') // using if condition skip 
+the character before b and after y character 
+{
+printf("%c",str[i]);
+}
+i++;
+}
+getch();
+}
+Eg:
+Input String: mn jn kn kazfd
+Output String: mn jn kn k
+
+// Q.12 Write a C program which accept sentence from user and print number of small letters, capital 
+letters, Spaces and digits from that sentence.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,small=0,capital=0,space=0,digit=0; //initialize 0 all variable for 
+counting
+printf("please enter a string:\n");
+fgets(str,sizeof(str),stdin); // taking string from user 
+printf("given string is:\n");
+printf("%s",str);
+while(str[i]!='\n')
+{ 
+if(str[i]>='a' && str[i]<='z') // using if condition count small letters 
+between a to z
+{
+small++;
+}
+else if(str[i]>='A' && str[i]<='Z') // using elseif condition count 
+capital letters between A to Z
+{
+capital++;
+}
+else if(str[i]>='0' && str[i]<='9') // using elseif condition count 
+digits upto 0 to 9
+{
+digit++;
+}
+else if(str[i]==' ') // using elseif condition count spaces in given 
+string
+{
+space++;
+}
+i++;
+}
+printf("small letter in given string are:%d\n",small); // print small letters
+printf("capital letter in given string are:%d\n",capital); // print capital 
+letters
+printf("Digit in given string are:%d\n",digit); // print digit in given 
+string
+printf("white spaces in given string are:%d\n",space); // print white spaces 
+in given string
+getch();
+}
+Eg:
+Input String: abcDE 5Glm1 O
+Output String: Small: 5 Capital: 4 Digits: 2 Spaces: 2 
+
+//Q.13 Write a C program which accept sentence from user and print number of white spaces from 
+that sentence.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,count=0;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin); // user input string 
+printf(" given string is:\n");
+printf("%s",str);
+while(str[i]!='\n')
+{
+ if(str[i]==' ') // using if condition count spaces upto \n 
+{
+count++;
+}
+i++;
+}
+printf("count of white spaces in given string is:%d",count); // print count of 
+spaces
+getch();
+}
+Input String: India is my country
+Output: 3
+
+//Q.14 Write a C program which accept sentence from user and print number of words of even and 
+odd length from that sentence.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,count=0,even_count=0,odd_count=0;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin); // user input string 
+printf(" given string is:\n");
+printf("%s",str);
+while(str[i]!='\n')
+{
+ while(str[i]==' ')
+ {
+ i++;
+ }
+ while(str[i]!=' ' && str[i]!='\n')// using while loop count the character upto 
+space
+ {
+ count++;
+ i++;
+ }
+ if(count %2==0) // for even count
+ {
+ even_count++;
+ } 
+ else // for odd count
+ {
+ odd_count++;
+ }
+ count=0; // initailze again count for next word in given string
+ }
+printf("even count in given string is:%d\n",even_count);
+printf("odd count in given string is:%d",odd_count);
+getch();
+}
+
+//Q.15 Write a C program which accept sentence from user and print last word from that sentence.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,j=0;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin); // user input string 
+printf(" given string is:\n");
+printf("%s",str);
+printf("print last word:\n");
+while(str[i]!='\n') // string goes to the \n
+{
+ i++;
+}
+i--; // remove \n in given string
+while(str[i]==' ') // using while condition remove the spaces in last in string
+{
+i--;
+}
+j=i; // i index value copy with j value
+while(str[j]!=' ') // using while loop skip the character upto the space
+{
+j--;
+}
+j++; // using post increment remove the space
+while(j<=i) // using while print last word charcater in given string in j 
+variable
+{
+printf("%c",str[j]); // print last word
+j++;
+}
+getch();
+}
+
+
+//Q.17.Write a C program to convert the string from upper case to lower case.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i=0;
+printf("please enter new string:\n");
+fgets(str,sizeof(str),stdin);
+printf("given string is:\n");
+printf("%s",str);
+while(str[i]!='\n')
+{
+while(str[i]==' ')
+{
+i++;
+}
+if(str[i]>=65 && str[i]<=90)
+{
+str[i]=str[i]+32;
+}
+i++;
+}
+printf("lower case string is :%s\n",str);
+getch();
+}
+Eg:
+Input String: India Is My Country
+Output String: india is my country
+*/
+//Q.18.Write a C program which toggles the case of a string.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i=0;
+printf("please enter new string:\n");
+fgets(str,sizeof(str),stdin);
+printf("given string is:\n");
+printf("%s\n",str);
+while(str[i]!='\n')
+{
+while(str[i]==' ')
+{
+i++;
+}
+if(str[i]>='A' && str[i]<='Z')
+{
+str[i]=str[i]+32;
+}
+else if(str[i]>='a' && str[i]<='z')
+{
+str[i]=str[i]-32;
+}
+i++;
+}
+printf("toggle each character :%s\n",str);
+getch();
+}
+Eg:
+Input String: technOrbit Infosystems
+Output String: TECHNoRBIT iNFOSYSTEMS
+*/
+
+//Q.20 Write a C program which accept starting from user and copy that string into some another 
+string.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],i=0;
+char str1[100];
+printf("please enter new string:\n");
+fgets(str,sizeof(str),stdin); // input string from user
+printf("given string is:\n");
+printf("%s\n",str);
+while(str[i]!='\n')
+{
+ 
+ str1[i]=str[i]; // copied one string in new string
+ i++;
+ }
+ str1[i]='\0'; // new string stop to '\0'
+ printf("copied string is:%s\n",str1); // print copied string
+ getch();
+}
+
+/*Q.21.Write a program which accept string from user and copy first N charaters into some 
+destination string.
+
+Eg:
+Input String: India is my country india
+Input of N: 8
+Output String: India is*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+int i=0,n;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin);
+printf("given string is:\n");
+printf("%s",str);
+printf("how many character print in string:\n");
+scanf("%d",&n);
+ while(i!=n) // using while loop print character upto n value
+{
+ printf("%c",str[i]);
+ i++;
+ }
+getch();
+}
+/*22.Write a C program which accept string from user and accept number N then copy last N 
+character into some another string.
+Input String: India is my country
+Input of N: 5
+Output String: is my*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100],str1[100];
+int i=0,j=0,n;
+printf("please enter given string:\n");
+fgets(str,sizeof(str),stdin);
+printf("given string is:\n");
+printf("%s",str);
+printf("how many character print in string:\n");
+scanf("%d",&n);
+printf("last n character are:\n");
+while(str[i]!='\0')
+{
+ if(str[i]=='\n') // if condition start from last character in given string
+ {
+ i=i-n; // subtracting n value in i variable which store all 
+character in given string
+ while(str[i]!='\n')
+ {
+ str1[j]=str[i]; // str[i] is copied in new str[j]
+ i++;
+ j++;
+ if(str[i]=='\n') // when str[i] goes to \n then explicit add \0 
+at the end of str[j]
+ {
+ str1[j]='\0';
+ break; // then break the loop
+ }
+ }
+ }
+ i++;
+}
+printf("%s",str1); // print new string which given by n varibale in str[i]
+getch();
+}
+/*23.Write a C program which accept two strings from user and append second string after 
+first string.
+Eg:
+Input String: India Country
+Output String: IndiaCountry
+*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ char str[100],str1[100];
+ int i=0,n,j=0;
+ printf("enter 1st string:\n");
+ fgets(str,sizeof(str),stdin);
+ printf("enter 2nd string:\n");
+ fgets(str1,sizeof(str1),stdin);
+ printf("new append string is:\n");
+ while(str[i]!='\0')
+ {
+ if(str[i]=='\n') // using if condition i break to \n
+ {
+ while(str1[j]!='\n') // 2nd string also break to \n
+ {
+ str[i]=str1[j]; // str[i] index character continue with \n and 
+2nd string of 1st charcater continue with \n with str[i]
+ i++;
+ j++;
+ if(str1[j]=='\n')
+ {
+ str[i]='\0'; // explicit add \0 after ending str1[j]
+ break;
+ }
+ }
+ }
+ i++;
+ }
+ printf("%s",str); // print append string
+ getch();
+}
+//Q.24.Write a C program which accept two strings from user and append N characters of 
+second string after first string.
+/*Eg:
+Input String: India Country
+Input of N: 4
+Output String: IndiaCoun
+*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ char str[100],str1[100];
+ int i=0,n,j=0;
+ printf("enter 1st string:\n");
+ fgets(str,sizeof(str),stdin);
+ printf("enter 2nd string:\n");
+ fgets(str1,sizeof(str1),stdin);
+ printf("new append string is:\n");
+ printf("how many character print in string:\n");
+ scanf("%d",&n);
+ printf("n character are:\n");
+ while(str[i]!='\0')
+ {
+ if(str[i]=='\n') // using if condition i break to \n
+ {
+ while(j!=n) // while loop break after equal j==n
+ {
+ str[i]=str1[j]; // str[i] index character continue with \n 
+and 2nd string of 1st charcater continue with \n with str[i]
+ i++;
+ j++;
+ if(j==n)
+ {
+ str[i]='\0'; // explicit add \0 after ending 
+str1[j]
+ break;
+ }
+ }
+ }
+ i++;
+ }
+ printf("%s",str);
+ getch();
+}
+/*25.Write a C program which accept two strings from user and compare two strings. If both strings 
+are equal then return 0 otherwise return difference between first mismatch character.
+Eg:
+Input String1: India is my country.
+Input String2: India is my country.
+Output: Both strings are equal.
+*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ char str[100],str1[100];
+ int i=0,flag=0;
+ printf("enter 1st string:\n");
+ fgets(str,sizeof(str),stdin);
+ printf("enter 2nd string:\n");
+ fgets(str1,sizeof(str1),stdin);
+ while(str[i]!='\n')
+ {
+ if(str[i]!=str1[i]) // uisng if condition compairing two strings if two string 
+are not equal then goes to if condition
+ {
+ flag=1;
+ break;
+ }
+ i++;
+ }
+ if(flag==0)
+ {
+ printf("\nboth strings are equal");
+ }
+ else
+ {
+ printf("\nboth strings are not equal");
+ }
+ getch();
+}
+/* Q.26.Write a C program which accept two strings from user and compare only first N characters of 
+two strings. If both strings are equal till first N characters then return 0 otherwise return difference 
+between first mismatch character.
+Eg:
+Input String1: Ramayan
+Input String2: Ramanacharya
+Input of N: 4
+Output: Both strings are equal. */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+char str1[100];
+int i,n,flag=0;
+printf("1st input string is:\n");
+fgets(str,sizeof(str),stdin);
+ printf("2nd input string is:\n");
+fgets(str1,sizeof(str1),stdin);
+printf("pleas enter value of n:\n");
+scanf("%d",&n); 
+for(i=0;i<=n;i++) // using for loop i index 0 goes to n value
+{
+if(str[i]!=str1[i]) // compairing both strings
+{
+flag=1;
+break;
+}
+}
+if(flag==0)
+{
+printf("both string are equal upto %d",n);
+}
+else
+{
+printf("strings are not equal");
+}
+getch();
+}
+/*Q.27 Write a C program which accept two strings from user and compare two strings without case 
+sensitivity. If both strings are equal then return 0 otherwise return difference between first mismatch 
+character.
+Eg:
+Input String1: india Is mY cOuntry
+Input String2: INDIA is MY countrY
+Output: Both strings are equal. */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+char str1[100];
+int i=0,flag=0;
+printf("1st input string is:\n");
+fgets(str,sizeof(str),stdin);
+ printf("2nd input string is:\n");
+fgets(str1,sizeof(str1),stdin);
+while(str[i]!='\0' && str1[i]!='\0')
+{
+if(str[i]==str1[i]) // comparing two string
+{
+i++;
+continue;
+}
+else if(str[i]-32==str1[i]|| str[i]==str1[i]-32)
+{
+i++;
+continue;
+}
+else if(str[i]+32==str1[i]|| str[i]==str1[i]+32)
+{
+i++;
+continue;
+}
+else if(str[i]<str1[i])
+{
+flag=1;
+printf("1");
+break;
+}
+else
+{
+flag=1;
+printf("-1");
+break;
+}
+}
+if(flag==0)
+{
+printf("0");
+}
+getch();
+}
+/*28.Write a C program which accept string from user and then reverse the string till first N 
+characters without taking another 
+string.
+Eg:
+Input String: India is my country
+Input of N: 8
+Output : m si aidnIy country
+*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char str[100];
+char str1[100];
+int i,n;
+printf("1st input string is:\n");
+fgets(str,sizeof(str),stdin);
+printf("pleas enter value of n:\n");
+scanf("%d",&n);
+printf("output string is:\n");
+for(i=n-1;i>=0;i--) // reverse the character upto n value in string
+{
+printf("%c",str[i]);
+}
+for(i=n;str[i]!='\n';i++) // after revserse n value then print remaining 
+character as it is upto \n
+{
+printf("%c",str[i]);
+}
+getch();
+}
+
+
+
+
+// 2D ARRAY 
+
+// Q.1 Write a C program to add two matrices in third Matrix(Using Static Memory 
+Allocation)
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[3][3],b[3][3],c[3][3];
+int n,n1,i,j;
+printf("please enter order of row and columns matrix A:\n"); // taking order of 
+row and columns from user
+scanf("%d%d",&n,&n1);
+printf("please enter matrix elements:\n");
+for(i=0;i<n;i++) // for row elements using outer for 
+loop
+{
+for(j=0;j<n1;j++) // for columns elements using inner 
+for loop
+{
+scanf("%d",&a[i][j]); // taking matrix element from user
+}
+}
+printf("elements of matrix of A:\n"); 
+ for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+printf("%d\t",a[i][j]); // print A matrix 
+}
+printf("\n");
+}
+printf("please enter order of row and columns matrix B:\n"); // taking order of 
+row and columns from user for B matrix
+scanf("%d%d",&n,&n1);
+printf("please enter matrix elements:\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+printf("elements of matrix of B:\n"); // print elements in matrix B
+ for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+printf("%d\t",b[i][j]);
+}
+printf("\n");
+}
+printf("addition of two matrix:\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+ c[i][j]=a[i][j]+b[i][j]; // addition of two matrix stored in new matrix
+}
+printf("\n");
+}
+printf("matrix C:\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+ printf("%d\t",c[i][j]); // here getting addition of two matrix using 
+another matrix
+}
+printf("\n");
+}
+getch();
+}
+//Q.2 Write a C program to subtract two matrices in third matrix (Using Static memory 
+Allocation).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[3][3],b[3][3],c[3][3];
+int n,n1,i,j;
+printf("please enter order of row and columns matrix A:\n"); // taking order of 
+row and columns from user
+scanf("%d%d",&n,&n1);
+printf("please enter matrix elements:\n");
+for(i=0;i<n;i++) // for row elements using outer for 
+loop
+{
+for(j=0;j<n1;j++) // for columns elements using inner 
+for loop
+{
+scanf("%d",&a[i][j]); // taking matrix element from user
+}
+}
+printf("elements of matrix of A:\n"); 
+ for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+printf("%d\t",a[i][j]); // print A matrix 
+}
+printf("\n");
+}
+printf("please enter order of row and columns matrix B:\n"); // taking order of 
+row and columns from user for B matrix
+scanf("%d%d",&n,&n1);
+printf("please enter matrix elements:\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+printf("elements of matrix of B:\n"); // print elements in matrix B
+ for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+printf("%d\t",b[i][j]);
+}
+printf("\n");
+}
+printf(" subtraction of two matrix :\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+ c[i][j]=a[i][j]-b[i][j]; // subtraction of two matrix stored in new matrix
+}
+printf("\n");
+}
+printf(" matrix C is :\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+ printf("%d\t",c[i][j]); // here getting subtraction of two matrix using 
+another matrix
+}
+printf("\n");
+}
+getch();
+}
+
+//Q.3 Write a c program to check whether given matrix is upper triangular or not (Using 
+Static Memory Allocation). 
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,flag=0;
+printf("please enter order of row and column in matrix:\n");
+scanf("%d%d",&r,&c);
+printf("enter matrix element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+} 
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(i>0 && j<=1) // using if condition i is start form 1 index && j 
+start from 0 and end to 1 index
+{ 
+if(i==j) // if i index ie equal equal to j then continue the 
+loop
+{
+continue;
+}
+if(a[i][j]!=0) // if lower traingular not equal to zero then 
+break the inner loop
+{
+flag=1;
+break;
+}
+}
+ if(flag==1) // break outer loop
+ {
+ break;
+ }
+}
+}
+if(flag==1)
+{
+printf("given matrix is not upper traingular matrix");
+}
+else
+{
+printf("given matrix is a upper traingular matrix");
+}
+getch();
+}
+ // Q. 4. Write a C program to check whether given matrix is lower triangular or not .
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,flag=0;
+printf("please enter order of row and column in matrix:\n");
+scanf("%d%d",&r,&c);
+printf("enter matrix element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+} 
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(i<=1 && j>0) 
+{ 
+if(i==j) 
+{
+continue;
+}
+if(a[i][j]!=0) 
+{
+flag=1;
+break;
+}
+}
+ if(flag==1) 
+ {
+ break;
+ }
+}
+}
+if(flag==1)
+{
+printf("given matrix is not lower traingular matrix");
+}
+else
+{
+printf("given matrix is a lower traingular matrix");
+}
+getch();
+}
+// Q.5 Write C Program to Check if a given Matrix is an Identity Matrix. (Using Static 
+Memory Allocation).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,flag=0;
+printf("please enter order of row and column in matrix:\n");
+scanf("%d%d",&r,&c);
+printf("enter matrix element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+} 
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{ 
+if(i!=j) // index i is not equal to index j then execute this 
+statement
+{
+if(a[i][j]!=0)
+{
+flag=1;
+break;
+}
+}
+if(flag==1)
+{
+break;
+}
+}
+}
+if(flag==1)
+{
+printf("given matrix is not identity matrix");
+}
+else
+{
+printf("given matrix is a identity matrix");
+}
+getch();
+}
+//Q.6.Write a C Program to multiply two Matrices in third matrix(Using Static Memory 
+Allocation). 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10],b[10][10],mul[10][10];
+int i,j,r,c,k,sum=0;
+printf("please enter order of row and columns of matrix A:\n"); // taking row and 
+column from user
+scanf("%d%d",&r,&c);
+printf("enter matrix A elements:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf(" matrix A elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);// print A matrix
+}
+printf("\n");
+}
+printf("please enter order of row and columns of matrix B:\n");
+scanf("%d%d",&r,&c);
+printf("enter matrix B elements:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+printf(" matrix B elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",b[i][j]); // print B matrix
+}
+printf("\n");
+}
+printf("multiplication:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+mul[i][j]=0; // initialize zero because for addition of each 
+elements in next column 
+for(k=0;k<c;k++) // using 3rd loop for addition of each element in 
+each column
+{
+mul[i][j]=mul[i][j]+a[i][k]*b[k][j]; // A matrix row is same 
+change in column and B matrix column is same change in row
+}
+}
+}
+printf("multiplication i:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+ printf("%d\t",mul[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+//Q.7 Write C program to check if the matrix is symmetric or not (Using Static Memory 
+Allocation). 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,flag=0;
+printf("please enter order of row and columns in matrix;\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix elements;\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(a[i][j]!=a[j][i]) // if index a[i][j] is not equal to a[j][i] 
+then break the loop
+{
+flag=1;
+break;
+}
+}
+if(flag==1)
+{
+break;
+}
+}
+if(flag==1)
+{
+printf("the given matrix is not symmetric");
+}
+else
+{
+printf("the given matrix is symmetric");
+}
+getch();
+}
+//Q.8 Write a C Program to find the transpose of a given matrix (Using Static Memory 
+Allocation). 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10],b[10][10];
+int i,j,r,c;
+printf("please enter order of row and columns in matrix;\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix elements;\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(a[i][j]==a[j][i]) 
+{
+b[i][j]=a[j][i];
+}
+else if(a[i][j]!=a[j][i])
+{
+b[i][j]=a[j][i];
+}
+}
+}
+printf("transpose matrix:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+ printf("%d\t",b[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+//Q.9 Write a C Program to Search Element in a 2D Array (Using Static Memory Allocation).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int arr[4][4];
+int i,j,n,n1,search,flag=0;
+printf("please enter order of row matrix:\n");
+scanf("%d",&n);
+printf("please enter order of column matrix:\n");
+scanf("%d",&n1);
+printf("please enter searching elements:\n");
+scanf("%d",&search);
+printf("please enter matrix element:\n");
+for(i=0;i<n;i++) // using for loop for row elements
+{
+for(j=0;j<n1;j++) // using another for loop for column elements 
+{
+scanf("%d",&arr[i][j]);
+}
+}
+printf("matrix elements are:\n");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+printf("%d\t",arr[i][j]);
+}
+printf("\n");
+ }
+for(i=0;i<n;i++)
+{
+for(j=0;j<n1;j++)
+{
+if(arr[i][j]==search) // searching element cheking with each 
+element in given matrix
+{
+flag=1; // if searching element found then flag 
+value is 1
+printf("element found at arr[%d][%d]",i,j);
+break; // if searching elements is found then break 
+the loop immediately . 
+}
+}
+}
+if(flag==0) // if searching element not found the execute this loop
+{
+printf("searching element not found in given matrix");
+}
+getch();
+}
+10.Write C Program to read and print a Matrix , R and C must be input by User. (Using Static Memory 
+Allocation).
+// Q.11 Write C Program to Find Sum of all Elements of a Matrix.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[4][4];
+int i,j,r,c,sum=0;
+printf("please enter order of row and column in given matrix:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix elements:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+ printf("\n");
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+ sum=sum+a[i][j];
+}
+}
+printf("addition of matrix elements:%d",sum); // addition of matrix elements
+getch();
+}
+// Q.12 Write C Program to Find Largest Element in a Matrix.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[4][4];
+int i,j,r,c,max;
+printf("please enter order of row and column in given matrix:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix elements:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix elements are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+ printf("\n");
+}
+max=a[0][0]; // 1st matrix stored in max variable
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(max < a[i][j]) // cheking max number with each matrix elements
+{
+max=a[i][j];
+}
+}
+}
+printf("maximum number is:%d\n",max);
+getch();
+}
+//Q.13 Write C Program to Print Sum of Each Row and Column of given Matrix.(if matrix 
+3x3,o/p=> r1=_,r2=_,r3=_,c1=_,c2=_,c3=_)
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,sum=0;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+printf("sum of each row elements:\n");
+for(i=0;i<r;i++) // when 1st index is zero of row
+{
+sum=0;
+for(j=0;j<c;j++) // then j index is zero of column and it is execute 3 
+times when i=0
+{
+ sum=sum+a[i][j]; // addition of row elements
+ }
+ printf("r%d=%d\n",i,sum);
+}
+printf("sum of each column elements:\n");
+for(j=0;j<c;j++) // outer loop for column
+{
+sum=0;
+for(i=0;i<r;i++) // inner loop for row 
+{
+ sum=sum+a[i][j];
+ }
+ printf("c%d=%d\n",i,sum);
+}
+ getch();
+}
+//Q.14 Write C Program to Read a Matrix and Print Diagonals.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+printf("print only diagonal elements in given matrix:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(i==j) // using if condition only print diagonal element
+{
+printf("%d\t",a[i][j]);
+}
+else
+{
+printf("\t");
+}
+}
+printf("\n");
+}
+getch();
+}*/
+//Q.15 Write C program to check two matrices are identical or not
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10],b[10][10];
+int i,j,r,c,flag=0;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+printf("please enter order of row and column in matrix B:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix B element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+printf("matrix B element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",b[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+if(a[i][j]!=b[i][j])// checking value of two matrices when two 
+value is not equal to each other execute this condition 
+{
+flag=1;
+break;
+}
+}
+}
+if(flag==1)
+{
+printf("given two matrices is not indentical matrix");
+}
+else
+{
+printf("given two matrices is a indentical matrix");
+}
+getch();
+}
+//Q.16 Write C program to interchange the rows in the matrix.(take row number as input to 
+interchange exa. R1 with R3 or R2 with R3).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10],b[10][10];
+int i,j,r,c,k,r1,r2;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+printf("please enter the row which you want to interchange:\n");
+printf("choice be like r1=0,1,2,.....,r-1:\n");
+scanf("%d",&r1);
+ printf("please enter the row which you want to interchange:\n");
+printf("choice be like r2=0,1,2,.....,r-1:\n");
+scanf("%d",&r2);
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+b[i][j]=a[i][j]; // copy array A in array B
+}
+}
+for(i=0;i<c;i++)
+{
+a[i][r1]=a[i][r2]; // copy row elements of r2 in r1 in array A
+}
+ for(i=0;i<c;i++)
+{
+a[i][r2]=b[i][r1]; // after copy r2 in r1 then r1 element is vanish hence 
+copy r1 elements in array B beacuse r2 elements is overriding on c1 elements
+}
+printf("the array after the interchanging the row is given by:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+//Q.17 Write C program to interchange the columns in the matrix.(take column number as 
+input to interchange exa. C1 with C3 or C2 with C3).
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10],b[10][10];
+int i,j,r,c,k,c1,c2;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+printf("please enter the columns which you want to interchange:\n");
+printf("choice be like c1=0,1,2,.....,c-1:\n");
+scanf("%d",&c1);
+ printf("please enter the columns which you want to interchange:\n");
+printf("choice be like c2=0,1,2,.....,c-1:\n");
+scanf("%d",&c2);
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+b[i][j]=a[i][j]; // copy array A in array B
+}
+}
+for(i=0;i<r;i++)
+{
+a[i][c1]=a[i][c2]; // copy columns elements of c2 in c1 in array A
+}
+ for(i=0;i<r;i++)
+{
+a[i][c2]=b[i][c1]; // after copy c2 in c1 then c1 element is vanish hence 
+copy c1 elements in array B beacuse c2 elements is overriding on c1 elements
+}
+printf("the array after the interchanging the columns is given by:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+// Q.18 Write C program to arrange row elements in ascending order.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,k,temp=0;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<r;i++) // for row elements
+ {
+ for(j=0;j<c;j++) // for columns elements
+ {
+ for(k=j+1;k<c;k++) // using another for loop when for 1st row elements 
+compare with the 2nd column of 2nd row elements when 1st row elements is greater than 
+2nd row elemnts then sort that two elements
+ 
+ {
+ if(a[i][j]>a[i][k])
+ {
+ temp=a[i][j];
+ a[i][j]=a[i][k];
+ a[i][k]=temp;
+ }
+ }
+ }
+}
+printf("ascending matrix of row element is:\n");
+for(i=0;i<r;i++)
+ {
+ for(j=0;j<c;j++)
+ {
+ printf("%d\t",a[i][j]);
+ }
+ printf("\n");
+}
+getch();
+}
+// Q.19 Write C program to arrange column elements in ascending order.
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,k,temp=0;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+for(j=0;j<c;j++) // for row elements
+ {
+ for(i=0;i<r;i++) // for columns elements
+ {
+ for(k=i+1;k<r;k++) // using another for loop when for 1st column 
+elements compare with the 2nd rwo of 2nd column elements when 1st columns elements is 
+greater than 2nd columns elements then sort that two elements
+ 
+ {
+ if(a[i][j]>a[i][k])
+ {
+ temp=a[i][j];
+ a[i][j]=a[i][k];
+ a[i][k]=temp;
+ }
+ }
+ }
+}
+printf("ascending matrix in columns elemenst is:\n");
+for(i=0;i<r;i++)
+ {
+ for(j=0;j<c;j++)
+ {
+ printf("%d\t",a[i][j]);
+ }
+ printf("\n");
+}
+getch();
+}
+// Q.20. Write C program to find the count of even numbers in matrix
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10][10];
+int i,j,r,c,evencount=0;
+printf("please enter order of row and column in matrix A:\n");
+scanf("%d%d",&r,&c);
+printf("please enter matrix A element:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+printf("matrix A element are:\n");
+for(i=0;i<r;i++)
+{
+for(j=0;j<c;j++)
+{
+printf("%d\t",a[i][j]);
+}
+printf("\n");
+}
+for(i=0;i<r;i++)
+ {
+ for(j=0;j<c;j++)
+ {
+ if(a[i][j]%2==0) // using if condition cheking only even number
+ {
+ evencount++;
+ }
+ }
+}
+printf("even number in given matrix is:%d\n",evencount);
+getch();
+}
+
+	
+	
+//  DYNAMIC MEMORY ALLOCATION 
+
+
+
+Q.1 Write a C program to find the sum of all the elements of an array.(Using Dynamic 
+Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+ int *n;
+ int *p=NULL;
+ int i;
+ int sum=0;
+ printf("please enter array element do you want:\n");
+ n=(int*)malloc(sizeof(int));
+ scanf("%d",n);
+ p=(int*)malloc(*n*sizeof(int));
+ printf("enter array element :\n");
+ for(i=0;i<*n;i++)
+ {
+ scanf("%d",p+i);
+ }
+ printf("array element are :\n");
+ for(i=0;i<*n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ for(i=0;i<*n;i++)
+ {
+ sum=sum+*(p+i);
+ }
+ printf("sum of array element :%d\n",sum);
+ getch();
+}
+Q.2. Write a C program to accept string with multiple spaces from user and print as it is. 
+(Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *p=NULL;
+char ch;
+int size=1,i=0;
+p=(char*)malloc(sizeof(char));
+p='\0';
+printf("enter given string :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+p=(char*)realloc(p,size*sizeof(char));
+*(p+i)=ch;
+*(p+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s",p);
+getch();
+}
+Q.3 Write a C program to accept string with multiple spaces from user and print it with a
+sinlge space as a delimiter. (Using Dynamic Memory Allocation)
+Eg:
+Input String:
+_____India_____is_my_________country______________
+Output String:
+India_is_my_country (Consider _ as space)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *p=NULL;
+char ch;
+int size=1,i=0;
+p=(char*)malloc(sizeof(char));
+p='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+p=(char*)realloc(p,size*sizeof(char));
+ *(p+i)=ch;
+*(p+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+i=0;
+while(*(p+i)!='\0')
+{
+while(*(p+i)==' ')
+{
+i++;
+}
+if(*(p+i)!=' ')
+{
+printf("%c",*(p+i));
+i++;
+}
+if(*(p+i)==' ')
+{
+printf(" ");
+i++;
+}
+}
+getch();
+}
+Q.4 Write a C program that return the positions of the pallindrome element in array (Using 
+Dynamic Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+ int *n;
+ int *p=NULL; 
+ int i;
+ int rev=0,flag=0;
+ int *rem;
+ int *temp;
+ printf("please enter array element do you want:\n");
+ n=(int*)malloc(sizeof(int));
+ scanf("%d",n);
+ p=(int*)malloc(*n*sizeof(int));
+ rem=(int*)malloc(sizeof(int));
+ temp=(int*)malloc(sizeof(int));
+ printf("enter array element :\n");
+ for(i=0;i<*n;i++)
+ { 
+ scanf("%d",p+i);
+ }
+ printf("array element are :\n");
+ for(i=0;i<*n;i++)
+ { 
+ printf("%d\n",*(p+i));
+ }
+ printf("print all pallindrome number in given array element:\n");
+ for(i=0;i<*n;i++)
+ {
+ *temp=*(p+i);
+ rev=0;
+ while(*temp>0)
+ {
+ *rem=*temp%10;
+ rev=rev*10+*rem;
+ *temp=*temp/10;
+ }
+ if(*(p+i)==rev)
+ {
+ flag=1;
+ printf("%d\n",*(p+i));
+ }
+ }
+ if(flag==0)
+ {
+ printf("number is not pallindrome");
+ }
+ free(p);
+ getch();
+}
+Q.5 Write a C program to sort first half of array in ascending order and second half of array 
+in descending order. (Using Dynamic Memory Allocation).
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i,mid=0,j;
+int temp=0;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf(" Enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+mid=n/2;
+for(i=0;i<n;i++)
+{
+for(j=0;j<mid;j++)
+{
+if(*(p+i)<*(p+j))
+{
+ temp=*(p+i);
+ *(p+i)=*(p+j);
+ *(p+j)=temp;
+}
+}
+for(j=mid+1;j<n;j++)
+{
+if(*(p+i)>*(p+j))
+{
+ temp=*(p+i);
+ *(p+i)=*(p+j);
+ *(p+j)=temp;
+}
+}
+}
+printf("array sorted in 1st half array in ascending order and 2nd half in 
+descending order:\n");
+for(i=0;i<n;i++)
+{
+ printf("%d\n",*(p+i));
+}
+getch();
+}
+Q.6 Write a C program to print count of number characters in given string (Using Dynamic 
+Memory Allocation).
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,count=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+if(*(str+i)==' ')
+{
+i++;
+}
+while(*(str+i)!=' '&& *(str+i)!='\0')
+{
+count++;
+i++;
+}
+}
+printf("number of character in given string are:%d",count);
+getch();
+}
+Q.7 Write a C program to accept string and print it in the reverse order. (Using Dynamic Memory 
+Allocation).
+Eg:
+Input String: India is my country
+Output String: yrtnuoc ym si aidnI
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,count=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+count++;
+i++;
+}
+printf("reverse string is:\n");
+while(count>=0)
+{
+printf("%c",*(str+count));
+count--;
+}
+getch();
+}
+Q.8 Write a C program to copy the elements of one array into another array. (Using Dynamic 
+Memory Allocation).
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+ int *n;
+ int *p=NULL;
+ int i;
+ int *q=NULL;
+ printf("please enter array element do you want:\n");
+ n=(int*)malloc(sizeof(int));
+ scanf("%d",n);
+ p=(int*)malloc(*n*sizeof(int));
+ q=(int*)malloc(*n*sizeof(int));
+ printf("enter array element :\n");
+ for(i=0;i<*n;i++)
+ {
+ scanf("%d",p+i);
+ }
+ printf("array element are :\n");
+ for(i=0;i<*n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ for(i=0;i<*n;i++)
+ {
+ *(q+i)=*(p+i);
+ }
+ printf("copied array is given as:\n");
+ for(i=0;i<*n;i++)
+ {
+ printf("%d\n",*(q+i));
+ }
+ free(p);
+ getch();
+}
+Q.9 Write a C program to count count of number of vowels and number of consonants in the 
+given string. (Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,p=0,q=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+if(str[i]=='a' || str[i]=='e' ||str[i]=='i' ||str[i]=='o' ||str[i]=='u'|| 
+str[i]=='A' ||str[i]=='E' ||str[i]=='I' ||str[i]=='O' ||str[i]=='U')
+{
+p++;
+}
+else if(*(str+i)!=' ')
+{
+q++;
+}
+i++;
+}
+printf("vowels are in given string:%d\n",p);
+ printf("consonants are in given string:%d\n",q);
+getch();
+}
+Q.10 Write a C program to reverse a given string as below. (Using Dynamic Memory Allocation).
+Eg:
+Input String: India is my country
+Output String: aidnI si ym yrtnuoc
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,j;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("reverse string is:\n");
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+while(*(str+i)!=' ' && *(str+i)!='\0')
+{
+i++;
+}
+ j=i-1;
+ while(*(str+j)!=' '&& j!=0)
+ {
+ printf("%c",*(str+j));
+ j--;
+ }
+ printf(" ");
+}
+getch();
+}
+Q.11 Write a C program to sort only even numbers in given array (Using Dynamic Memory Allocation)
+Eg.
+Input: 45 8 75 29 5 49 56 22 14 497 288 18 2
+Output: 45 2 75 29 5 49 8 14 18 497 22 56 288
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int *q=NULL;
+int n,i,k=0,count=0,j;
+int temp=0;
+printf("please enter how many array element do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+q=(int*)malloc(n*sizeof(int));
+printf("enter array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("enter array elements:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+for(i=0;i<n;i++)
+{
+if(*(p+i)%2==0)
+{
+ *(q+k)=*(p+i);
+k++;
+count++;
+}
+}
+for(i=0;i<count;i++)
+{
+for(j=i+1;j<count;j++)
+{
+if(*(q+i)>*(q+j))
+{
+temp=*(q+i);
+*(q+i)=*(q+j);
+*(q+j)=temp;
+}
+}
+}
+k=0;
+for(i=0;i<n;i++)
+{
+if(*(p+i)%2==0)
+{
+*(p+i)=*(q+k);
+k++;
+}
+}
+printf("even sort array elements:\n");
+ for(i=0;i<n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ getch();
+}
+Q.12 Write a C program to replace space with ‘$’ in given string. (Using Dynamic Memory Allocation)
+Eg:
+Input String: India is my country
+Output String: India$is$my$coutry
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+ *(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s",str);
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+if(*(str+i)!=' ')
+{
+printf("%c",*(str+i));
+i++;
+}
+if(*(str+i)==' ')
+{
+printf("$");
+i++;
+}
+}
+getch();
+}
+Q.13 Write a program in C to separate odd and even integers in same array. (Using Dynamic Memory 
+Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *a=NULL;
+int *b=NULL;
+int *c=NULL;
+int n,i,k,count=0,j,count1=0;
+printf("plase enter how many array element do you want:\n");
+scanf("%d",&n);
+a=(int*)malloc(n*sizeof(int));
+b=(int*)malloc(n*sizeof(int));
+c=(int*)malloc(n*sizeof(int));
+printf("please enter array elments:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",a+i);
+}
+printf("array elments are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(a+i));
+}
+k=0;
+count=0;
+for(i=0;i<n;i++)
+{
+if(*(a+i)%2==0)
+{
+*(b+k)=*(a+i);
+k++;
+count++;
+}
+}
+j=0;
+count1=0;
+for(i=0;i<n;i++)
+{
+if(*(a+i)%2!=0)
+{
+*(c+j)=*(a+i);
+j++;
+count1++;
+}
+}
+printf(" new array elements for even and odd numbers:\n");
+ for(i=0;i<count;i++) 
+ {
+ printf("%d\n",*(b+i));
+ }
+ for(i=0;i<count1;i++)
+ {
+ printf("%d\n",*(c+i));
+}
+ getch();
+}
+Q.14 Write a program which accept sentence from user and print number of words from that 
+sentence. (Using Dynamic Memory Allocation)
+Input String: India_is_my_country
+Output: 4
+Input String: ______India______is____my____country____ 
+(Consider _ as space)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=1,i=0;
+int count=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+ i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+if((*(str+i)!=' ' && *(str+i+1)==' ') || *(str+i)=='\0') 
+ { 
+ count++;
+ }
+ if(*(str+i)!=' ' && *(str+i+1)=='\0') 
+ {
+ count++;
+ }
+ i++;
+ }
+ printf("count of given string:%d",count); 
+ getch();
+}
+Q.15. Write a program in C to print all unique elements in an array. (Using Dynamic Memory 
+Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i,count=0,j;
+printf("please enter how many array element do you want:\n:");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+printf("unique element in given array are:\n");
+for(i=0;i<n;i++)
+{
+count=0;
+for(j=0;j<n;j++)
+{
+if(*(p+i)==*(p+j))
+{
+count++;
+}
+}
+ if(count==1)
+ {
+ printf("%d\n",*(p+i));
+ }
+}
+getch();
+}
+Q.16 Write a C program to replace Good names in mail.
+Eg:
+Raw String: Hello GoodName
+Input String: India
+Output String: Hello India
+Input String: Sangamner
+Output String: Hello Sangamner 
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char* str=NULL;
+char *str1=NULL;
+char ch;
+int size=0,i=0,j=0;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+*str='\0';
+str1='\0';
+printf("please enter 1st string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("\nplease enter 2nd string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str1=(char*)realloc(str1,size*sizeof(char));
+*(str1+i)=ch;
+*(str1+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str1);
+i=0;
+printf("after good mail the string is:\n");
+while(*(str+i)!=' ')
+{
+i++;
+}
+while(*(str1+j)!='\0')
+{
+i++;
+*(str+i)=*(str1+j);
+j++;
+}
+ *(str+i+1)='\0';
+printf("%s",str);
+getch();
+}
+Q.17 Write a program in C to insert New value in the array (sorted list ). (Using 
+Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i,j,k,temp=0;
+printf("please enter how many array element do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter a new inserted value:\n");
+scanf("%d",&k);
+printf("enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+*(p+n)=k;
+for(i=0;i<n+1;i++)
+{
+for(j=0;j<n+1;j++)
+{
+if(*(p+i)<*(p+j))
+{
+temp=*(p+i);
+*(p+i)=*(p+j);
+*(p+j)=temp;
+}
+}
+}
+printf("new inserted value in sorted list is as below:\n");
+for(i=0;i<n+1;i++)
+{
+printf("%d\n",*(p+i));
+}
+getch();
+}
+Q.19. Write a program in C to delete an element at desired position from an array. (Using 
+Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i,j,k;
+printf("please enter how many array element do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter which position element delete do you want:\n");
+scanf("%d",&k);
+printf("enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+*(p+i)=k;
+for(i=k;i<n-1;i++)
+{
+*(p+i)=*(p+i)+1;
+}
+printf("after deleting the given array is :\n");
+for(i=0;i<n-1;i++)
+{
+printf("%d\n",*(p+i));
+}
+getch();
+}
+Q.20. Write a C program which accepts a string from user which contains a characters from ‘b’ to ‘y’. 
+(Using Dynamic Memory Allocation)
+Eg:
+Input String: mn jn kn kazfd
+Output String: mn jn kn k*/
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+if((*(str+i)>='b' && *(str+i)<='y') || *(str+i)==' ')
+{
+printf("%c",*(str+i));
+}
+i++;
+}
+getch();
+}
+Q.21 Write a C program which accept sentence from user and print number of small letters, capital 
+(Using Dynamic Memory Allocation) letters, Spaces and digits from that sentence.
+Input String: abcDE 5Glm1 O
+Output String: Small: 5 Capital: 4 Digits: 2 Spaces: 2
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+int small=0,digit=0,capital=0,space=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+if(*(str+i)>='a' && *(str+i)<='z') 
+ {
+ small++;
+ }
+ else if(*(str+i)>='A' && *(str+i)<='Z')
+ {
+ capital++;
+ }
+ else if(*(str+i)>='0' && *(str+i)<='9')
+ {
+ digit++;
+ }
+ else if(*(str+i)==' ') 
+ {
+ space++;
+ }
+ i++;
+ }
+ printf("small letter in given string are:%d\n",small); 
+ printf("capital letter in given string are:%d\n",capital); 
+ printf("Digit in given string are:%d\n",digit);
+ printf("white spaces in given string are:%d\n",space); 
+ getch();
+}
+Q.22. Write a program in C to find the maximum / minimum element in an array. (Using 
+Dynamic Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+ int *n;
+ int *p=NULL;
+ int i;
+ int sum=0,max=0,min=0;
+ printf("please enter array element do you want:\n");
+ n=(int*)malloc(sizeof(int));
+ scanf("%d",n);
+ p=(int*)malloc(*n*sizeof(int));
+ printf("enter array element :\n");
+ for(i=0;i<*n;i++)
+ {
+ scanf("%d",p+i);
+ }
+ printf("array element are :\n");
+ for(i=0;i<*n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ max=*(p+0);
+for(i=0;i<*n;i++)
+ {
+ if(max <*(p+i))
+{
+max=*(p+i);
+}
+}
+printf("maximum number is:%d\n",max);
+min=*(p+0);
+for(i=0;i<*n;i++)
+{
+if(min >*(p+i))
+{
+min=*(p+i);
+}
+}
+printf("minimum number is:%d\n",min);
+getch();
+}
+Q.23.Write a C program which accept sentence from user and print number of white 
+spaces from that sentence. (Using Dynamic Memory Allocation)
+Eg:
+Input String: India is my country
+Output: 3
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,count=0;
+int small=0,digit=0,capital=0,space=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+if(*(str+i)==' ')
+{
+count++;
+}
+i++;
+}
+printf("number of spaces in given string:%d\n",count);
+getch();
+}
+Q.24 Write a program in C to find the second largest element in an array. 
+(Using Dynamic Memory Allocation).
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+ int n;
+ int *p=NULL;
+ int i,j,temp=0;
+ printf("enter array elements how many do you want:\n");
+ scanf("%d",&n);
+ p=(int*)malloc(n*sizeof(int));
+ printf("enter array elements\n");
+ for(i=0;i<n;i++) 
+ {
+ scanf("%d",p+i);
+ }
+ printf("array element are:\n");
+ for(i=0;i<n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ for(i=0;i<n;i++)
+ {
+ for(j=i+1;j<n;j++)
+ {
+ if(*(p+i)>*(p+j))
+ {
+ temp=*(p+i);
+ *(p+i)=*(p+j);
+ *(p+j)=temp;
+ }
+ }
+ }
+ printf("array element sorting:\n");
+ for(i=0;i<n;i++)
+ {
+ printf("%d\n",*(p+i));
+ }
+ printf("second heighest element in given array element:%d\n",*(p+n-2));
+ getch();
+}
+25.Write a C program which accept sentence from user and print number of 
+words of even and odd length from that sentence. (Using Dynamic Memory 
+Allocation)
+Eg:
+Input String: India is my country. I love my country.
+Output : Even: 5 Odd: 
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=1,i=0;
+int even_count=0,odd_count=0,count=0;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter a string:\n");
+ do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+while(*(str+i)!=' ' &&*(str+i)!='\0')
+{
+count++;
+i++;
+}
+if(count%2==0)
+{
+ even_count++;
+}
+else
+{
+ odd_count++;
+}
+count=0;
+}
+printf("even count in string is:%d\n",even_count);
+printf("odd count in string is:%d",odd_count);
+getch();
+}
+Q.26. Write a C Program to Find the Number of Elements in an Array (Using Dynamic 
+MemoryAllocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n;
+printf("please enter array element do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("enter array elements:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+printf("Alternate array elements are:\n");
+for(i=0;i<n;i++)
+{
+count++;
+}
+printf("elements are:%d\n",count);
+getch();
+}
+Q.27.Write a C program which accept sentence from user and print last word from that sentence. 
+(Using Dynamic Memory Allocation)
+Eg: Input String: India is my country
+Output String: country
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,j=0;
+str=(char*)malloc(sizeof(char));
+*str='\0';
+ printf("please enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+ i=0;
+printf("the last word is:\n");
+while(*(str+i)!='\0')
+{
+i++;
+}
+ while(*(str+i)==' ') 
+ {
+ i--;
+ }
+ j=i; 
+ while(*(str+j)!=' ') 
+ {
+ j--;
+ }
+ j++; 
+ while(j<=i) 
+ {
+ printf("%c",*(str+j));
+ j++;
+ }
+ getch();
+}
+Q.30 Write a C Program to Print the Alternate Elements in an Array (Using 
+Dynamic Memory Allocation).
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n;
+printf("please enter array element do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array elements:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("enter array elements:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+printf("Alternate array elements are:\n");
+for(i=0;i<n;i=i+2)
+{
+printf("%d\n",*(p+i));
+}
+getch();
+}
+Q.31.Write a C program to convert the string from upper case to lower case. 
+(Using Dynamic Memory Allocation)
+Eg:
+Input String: India Is My Country
+Output String: india is my country
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf(" THE STRING IS:%s\n",str);
+i=0;
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+if(*(str+i)>=65 && *(str+i)<=90)
+{
+ *(str+i)=*(str+i)+32;
+}
+i++;
+}
+printf("lower case character in given string are:\n%s",str);
+getch();
+}
+Q.32. Write a C Program to Find 2 Elements in the Array such that Difference 
+between them is Largest(Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+int n;
+int *p=NULL;
+int i,j,temp=0;
+printf("enter array elements how many do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("enter array elements\n");
+ for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array element are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(*(p+i)>*(p+j)) 
+{
+temp=*(p+i);
+ *(p+i)=*(p+j);
+*(p+j)=temp;
+}
+}
+}
+printf("2 Elements in the Array such that Difference between them is 
+Largest:\n%d\t%d",*(p+0),*(p+n-1));
+getch();
+}
+Q.33 Write a C program which toggles the case of a string. (Using Dynamic 
+Memory Allocation).
+Eg:
+Input String: technOrbit Infosystems
+Output String: TECHNoRBIT iNFOSYSTEMS
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("the string is:\n%s",str);
+i=0;
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+if(*(str+i)>='A' && *(str+i)<='Z')
+{
+ *(str+i)=*(str+i)+32;
+}
+else if(*(str+i)>='a' && *(str+i)<='z')
+{
+ *(str+i)=*(str+i)-32;
+}
+ i++;
+}
+printf("the toggle case is :\n%s",str);
+getch();
+}
+Q.34. Write a C Program to Input a String & Store their Ascii Values in an 
+Integer Array (Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("the given string is:\n%s",str);
+i=0;
+printf("\nASCII value in input string is:\n");
+while(*(str+i)!='\0')
+{
+while(*(str+i)==' ')
+{
+i++;
+}
+printf("%c=%d\n",*(str+i),*(str+i));
+i++;
+}
+getch();
+}
+Q.36 Write a C program to store squares of the elements in the same array
+(Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array element are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+printf("After squaring array element are:\n");
+for(i=0;i<n;i++)
+{
+*(p+i)=*(p+i)**(p+i);
+printf("%d\n",*(p+i));
+}
+getch();
+}
+Q.37 Write a C program which accept string from user and copy that string 
+into some another string. (Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int size=0,i=0;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("the string is:\n%s",str);
+i=0;
+while(*(str+i)!='\0')
+{
+*(str1+i)=*(str+i);
+i++;
+}
+*(str1+i)='\0';
+printf("\ncopied string is:\n%s",str1);
+getch();
+}
+Q.38 Write a program which accept string from user and copy first N charaters 
+into some destination string. (Using Dynamic Memory Allocation)
+Eg:
+Input String: India is my country
+Input of N: 8
+Output String: India is
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,n;
+str=(char*)malloc(sizeof(char));
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("the string is:\n%s",str);
+i=0;
+printf("\nplease enter how many character allow in string:\n");
+scanf("%d",&n);
+printf("copied character in given string are:\n");
+while(i!=n)
+{
+printf("%c",*(str+i));
+i++;
+}
+getch();
+}
+Q.39. Write C Program to Find the two Elements such that their Sum is Closest 
+to given number(Using Dynamic Memory Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i,j,k,flag=0;
+printf("please enter how many array elements do you want:\n");
+scanf("%d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array element are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+printf("enter a number to find the number closed to it:\n");
+ scanf("%d",&k);
+ for(i=0;i<n;i++)
+ {
+ for(j=i+1;j<n;j++)
+ {
+ if(*(p+i)+*(p+j)>=k && *(p+i)+*(p+j)<=k)
+ {
+flag=1;
+ printf("%d and %d is near to %d\n",*(p+i),*(p+j),k);
+ break;
+ }
+ }
+ }
+if(flag==0)
+{
+printf("the sum of two array element is not closes to seraching number");
+}
+ getch();
+}
+Q.40 Write a C program which accept string from user and accept number N then
+copy last N character into some another string. (Using Dynamic Memory 
+Allocation)
+Eg:
+Input String: India is my country
+Input of N: 5
+Output String: is my
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int size=0,i=0,n,j=0;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+*str='\0';
+*str1='\0';
+printf("enter a string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s",str);
+i=0;
+printf("please enter a number of character:\n");
+scanf("%d",&n);
+while(*(str+i)!='\0')
+{
+if(*(str+i)=='\0')
+{
+i=i-n;
+while(*(str+i)!='\0')
+{
+*(str1+j)=*(str+i);
+ i++;
+j++;
+ if(*(str+i)=='\0')
+ {
+*(str1+j)='\0';
+break;
+ }
+}
+}
+i++;
+}
+printf("last n character in new string are:%s\n",str1);
+getch();
+}
+Q.42.Write a C program which accept two strings from user and append second 
+string after first string. (Using Dynamic Memory Allocation)
+Eg:
+Input String: India Country
+Output String: IndiaCountry
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int i=0,size=0,j=0;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+*str='\0';
+*str1='\0';
+printf("please enter a string one :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+printf("please enter a string second :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str1=(char*)realloc(str,size*sizeof(char));
+*(str1+i)=ch;
+*(str1+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("\n%s",str1);
+printf("append string is:\n");
+while(*(str+i)!='\0')
+{
+if(*(str+i)=='\0')
+{
+while(*(str+j)!='\0')
+{
+*(str+i)=*(str1+j);
+ i++;
+ j++;
+ if(*(str1+j)=='\n')
+{
+*(str+i)='\0';
+break;
+}
+}
+}
+i++;
+}
+printf("%s",str);
+getch();
+}
+Q.44.Write a C program which accept two strings from user and append N 
+characters of second string (Using Dynamic Memory Allocation) after first 
+string.
+Eg:
+Input String: India Country
+Input of N: 4
+Output String: IndiaCoun
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int i=0,size=0,j,n;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+*str='\0';
+*str1='\0';
+printf("please enter a string one :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("\nplease enter a string second :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str1=(char*)realloc(str1,size*sizeof(char));
+*(str1+i)=ch;
+*(str1+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("\n%s",str1);
+i=0;
+j=0;
+printf("\nenter a n number of character:\n");
+scanf("%d",&n);
+while(*(str+i)!='\0')
+{
+if(*(str+i)=='\0')
+{
+while(j!=n)
+{
+*(str+i)=*(str1+j);
+ i++;
+ j++;
+ if(j==n)
+{
+*(str+i)='\0';
+break;
+}
+}
+}
+i++;
+}
+printf("%s",str);
+getch();
+}
+Q.45.Write a C program which accept two strings from user and compare two 
+strings. If both strings are equal then return 0 otherwise return difference 
+between first mismatch character. (Using Dynamic Memory Allocation)
+Eg:
+Input String1: India is my country.
+Input String2: India is my country.
+Output: Both strings are equal.
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int size=0,i=0,flag=0;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+str='\0';
+str1='\0';
+printf("please enter 1st string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("\nplease enter 2nd string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str1=(char*)realloc(str1,size*sizeof(char));
+*(str1+i)=ch;
+*(str1+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str1);
+i=0;
+while(*(str+i)!='\0')
+{
+if(*(str+i)!=*(str1+i))
+{
+flag=1;
+break;
+}
+i++;
+}
+if(flag==0)
+{
+printf("\nboth string are equal");
+}
+else
+{
+printf("both string are not equal");
+}
+getch();
+}
+Q.46.Write a C program which accept two strings from user and compare only 
+first N characters of two strings. If both strings are equal till first N 
+characters then return 0 otherwise return difference between first mismatch 
+character. (Using Dynamic Memory Allocation)
+Eg:
+Input String1: Ramayan
+Input String2: Ramanacharya
+Input of N: 4
+Output: Both strings are equal.
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char *str1=NULL;
+char ch;
+int size=0,i=0,flag=0,n;
+str=(char*)malloc(sizeof(char));
+str1=(char*)malloc(sizeof(char));
+str='\0';
+str1='\0';
+printf("please enter 1st string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("\nplease enter 2nd string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str1=(char*)realloc(str1,size*sizeof(char));
+*(str1+i)=ch;
+*(str1+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str1);
+i=0;
+printf("please n numner of character:\n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+if(*(str+i)!=*(str1+i))
+{
+flag=1;
+break;
+}
+}
+if(flag==0)
+{
+printf("\nboth string are equal upto %d",n);
+}
+else
+{
+printf("both string are not equal");
+}
+getch();
+}
+Q.49.Write a C program which accept string from user and then reverse the 
+string till first N characters without taking another string. (Using Dynamic 
+Memory Allocation)
+Eg:
+Input String: India is my country
+Input of N: 8
+Output : m si aidnIy country
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int size=0,i=0,n;
+str=(char*)malloc(sizeof(char));
+str='\0';
+printf("please enter 1st string:\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+i=0;
+printf("pleas enter value of n:\n");
+ scanf("%d",&n);
+ printf("output string is:\n");
+ for(i=n-1;i>=0;i--) 
+ {
+ printf("%c",*(str+i));
+ }
+ for(i=n;*(str+i)!='\0';i++) 
+ {
+ printf("%c",*(str+i));
+ }
+ getch();
+}
+Q.54. An array consist of Integers. Write a C program to count the number of 
+elements less than, greater than and equal to zero.(Using Dynamic Memory 
+Allocation)
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int *p=NULL;
+int n,i;
+int positive_count=0,negative_count=0,zero_count=0;
+printf("please enter how many array element do you want:\n");
+scanf("&d",&n);
+p=(int*)malloc(n*sizeof(int));
+printf("please enter array element:\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",p+i);
+}
+printf("array elements are:\n");
+for(i=0;i<n;i++)
+{
+printf("%d\n",*(p+i));
+}
+for(i=0;i<n;i++)
+{
+if(*(p+i)>0)
+{
+positive_count++;
+}
+else if(*(p+i)<0)
+{
+negative_count++;
+}
+else if(*(p+i)==0)
+{
+zero_count++;
+}
+}
+printf("positive number in given array are:%d\n",positive_count);
+printf("negative number in given array are:%d\n",negative_count);
+printf("zero count in given array are:%d\n",zero_count);
+getch();
+}
+Q.55 Write a C program to count number of alphabates, spaces and words in 
+given string. (Using Dynamic Memory Allocation).
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+char *str=NULL;
+char ch;
+int i=0,size=0,j=0,n;
+int alphabet=0,space=0,word=0;
+str=(char*)malloc(sizeof(char));
+*str='\0';
+printf("please enter a string one :\n");
+do
+{
+scanf("%c",&ch);
+if(ch!='\n')
+{
+size++;
+str=(char*)realloc(str,size*sizeof(char));
+*(str+i)=ch;
+*(str+i+1)='\0';
+i++;
+}
+}while(ch!='\n');
+printf("%s\n",str);
+while(*(str+i)!='\0')
+{
+ for(i=0;*(str+i)!='\0';i++)
+ {
+ if((*(str+i)>='a' && *(str+i)<='z') || (*(str+i)>='A' && *(str+i)<='Z'))
+ {
+ alphabet++;
+ }
+ else if(*(str+i)==' ' || *(str+i)=='\n') // counting spaces
+ {
+ space++;
+ }
+ if((*(str+i)!=' ' && *(str+i+1)==' ')|| (*(str+i)=='\n') )
+ {
+ word++;
+ }
+ }
+ }
+ printf("alphabets in given string are:%d\n",alphabet);
+ printf("spaces in given string are:%d\n",space);
+ printf("word in given string are:%d",word);
+ getch();
+}	
+	
+
+
